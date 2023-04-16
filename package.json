@@ -11,7 +11,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@supabase/auth-helpers-nextjs": "^0.6.0",
