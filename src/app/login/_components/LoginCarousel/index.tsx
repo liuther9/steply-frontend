@@ -4,7 +4,7 @@ import s from './LoginCarousel.module.scss'
 import { useWindowSize } from '@/shared/hooks'
 import { Title } from '@/shared/components/Title'
 import { Text } from '@/shared/components/Text'
-import { Button } from '@/shared/components/Button'
+import Button from '@/shared/components/Button'
 
 const slidenumber = [1, 2, 3]
 export default function LoginCarousel({ closeCarousel }: { closeCarousel: () => void }) {
