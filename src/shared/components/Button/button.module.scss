@@ -1,0 +1,25 @@
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 358px;
+	padding: 12px 16px;
+	background: #1ca65c;
+	border-radius: 16px;
+	border: 1px solid transparent;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	color: #ffffff;
+	transition: all 0.1s linear;
+	margin: 0 0 32px;
+	cursor: pointer;
+	&:hover,
+	&:active {
+		border: 1px solid #2ce381;
+		background: #19894d;
+	}
+	&:active {
+		transform: scale(0.95);
+	}
+}

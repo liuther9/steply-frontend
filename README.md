@@ -47,6 +47,10 @@ All shared components/utilities/hooks/types without any business logic should be
 
 Typical component template is '[Component]' folder with index.tsx
 
+## Commit
+
+
+
 ## Deploy
 
 The frontend will be hosted on Vercel and the might be migrated later to cut costs if required

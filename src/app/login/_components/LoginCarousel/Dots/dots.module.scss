@@ -1,0 +1,19 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 56px;
+	height: 8px;
+	.dot {
+		display: inline-block;
+		padding: 4px;
+		border-radius: 10px;
+		overflow: hidden;
+		background-color: #D2D2D2;
+		transition: all 0.1s linear;
+		&.active {
+			padding: 4px 12px;
+			background-color: #1CA65C;
+		}
+	}
+}

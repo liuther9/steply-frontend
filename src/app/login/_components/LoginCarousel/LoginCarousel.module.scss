@@ -1,0 +1,45 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	.container {
+		&_top {
+			width: 100%;
+			height: 50vh;
+			position: relative;
+			overflow: hidden;
+			margin: auto;
+			.slider {
+				top: 0;
+				left: 0;
+				position: absolute;
+				display: flex;
+				align-items: center;
+				overflow: hidden;
+				.slide {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					width: 100vw;
+					.content {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						width: 650px;
+					}
+				}
+			}
+		}
+		&_bot {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			margin: auto;
+		}
+	}
+}
