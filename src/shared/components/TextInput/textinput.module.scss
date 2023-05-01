@@ -1,3 +1,6 @@
+@use 'sass:map';
+@use '@/styles/variables' as *;
+
 .input,
 .input::placeholder {
 	font-style: normal;
@@ -10,14 +13,14 @@
 	padding: 14px 12px;
 	width: 360px;
 	height: 52px;
-	background: #f8f8f8;
+	background: map.get($grays, "100");
 	border-radius: 8px;
 	border: none;
 	transition: all 0.1s linear;
 	&::placeholder {
-		color: #959595;
+		color: map.get($grays, "500");
 	}
 	&:focus {
-		outline: 1px solid rgb(184, 184, 255);
+		outline: $input-outline;
 	}
 }

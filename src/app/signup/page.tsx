@@ -7,23 +7,27 @@ import { Title } from '@/shared/components/Title'
 import { Text } from '@/shared/components/Text'
 import s from './page.module.scss'
 import TextInput from '@/shared/components/TextInput'
+import { MISMATCH_TYPES } from '@/shared/components/types'
 
 const FormDemo = () => {
 	return (
-		<Form.Root className={s.wrapper} onSubmit={e => {
-			e.preventDefault()
-			const data = Object.fromEntries(new FormData(e.currentTarget));
-			console.log(data)
-		}}>
-		<Title>Авторизация</Title>
-		<Text>Авторизуйтесь и вам будут доступны все курсы</Text>
+		<Form.Root
+			className={s.wrapper}
+			onSubmit={(e) => {
+				e.preventDefault()
+				const data = Object.fromEntries(new FormData(e.currentTarget))
+				console.log(data)
+			}}
+		>
+			<Title>Регистрация</Title>
+			<Text>Авторизуйтесь и вам будут доступны все курсы</Text>
 			<Form.Field className={s.container} name='email'>
-				<div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-					<Form.Label className='FormLabel'>Email</Form.Label>
-					<Form.Message className={s.label} match='valueMissing'>
+				<div className={s.label_container}>
+					<Form.Label className={s.label}>Email</Form.Label>
+					<Form.Message className={s.error} match={MISMATCH_TYPES.VALUE_MISSING}>
 						Пожалуйста, введите ваш email
 					</Form.Message>
-					<Form.Message className='FormMessage' match='typeMismatch'>
+					<Form.Message className={s.error} match={MISMATCH_TYPES.TYPE_MISMATCH}>
 						Пожалуйста, введите корректный email
 					</Form.Message>
 				</div>
@@ -33,22 +37,22 @@ const FormDemo = () => {
 			</Form.Field>
 
 			<Form.Field className={s.container} name='password'>
-				<div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-					<Form.Label className='FormLabel'>Пароль</Form.Label>
-					<Form.Message className={s.label} match='valueMissing'>
-						Please enter your email
+				<div className={s.label_container}>
+					<Form.Label className={s.label}>Пароль</Form.Label>
+					<Form.Message className={s.error} match={MISMATCH_TYPES.VALUE_MISSING}>
+						Пожалуйста, введите пароль
 					</Form.Message>
-					<Form.Message className={s.label} match='typeMismatch'>
+					<Form.Message className={s.error} match={MISMATCH_TYPES.TYPE_MISMATCH}>
 						Пожалуйста, введите корректный пароль
 					</Form.Message>
 				</div>
 				<Form.Control asChild>
-					<TextInput type='email' required />
+					<TextInput type='password' required />
 				</Form.Control>
 			</Form.Field>
-			
+
 			<Form.Submit asChild>
-				<Button type='submit'>Авторизоваться</Button>
+				<Button type='submit'>Зарегестрироваться</Button>
 			</Form.Submit>
 		</Form.Root>
 	)
