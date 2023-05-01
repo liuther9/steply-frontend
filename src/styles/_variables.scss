@@ -1,0 +1,104 @@
+// colors
+$white:    #fff !default;
+$gray-100: #f8f8f8 !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #9A9A9A !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #494949 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+) !default;
+
+$green-100: #2ce381 !default;
+$green-200: #1ca65c !default;
+$green-300: #19894d !default;
+
+$greens: (
+  "100": $green-100,
+  "200": $green-200,
+  "300": $green-300
+) !default;
+
+$theme-colors: (
+  "success": #28a745,
+  "info": #17a2b8,
+  "warning": #ffc107,
+);
+
+// outlines
+$input-outline: 1px solid $green-200 !default;
+
+// containers
+@mixin flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%
+}
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+// scss-docs-end grid-breakpoints
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+) !default;
+// scss-docs-end container-max-widths
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           1.5rem !default;
+$grid-row-columns:            6 !default;
+
+// spacing
+
+$spacing-xs: 5px !default;
+$spacing-sm: 10px !default;
+$spacing-md: 15px !default;
+$spacing-lg: 20px !default;
+$spacing-xl: 25px !default;
+
+$spacings: (
+  "xs": $spacing-xs,
+  "sm": $spacing-sm,
+  "md": $spacing-md,
+  "lg": $spacing-lg,
+  "xl": $spacing-xl
+) !default;
