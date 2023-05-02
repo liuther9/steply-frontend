@@ -102,3 +102,20 @@ $spacings: (
   "lg": $spacing-lg,
   "xl": $spacing-xl
 ) !default;
+
+// font-sizes
+$font-size-xs: 12px !default;
+$font-size-sm: 16px !default;
+$font-size-md: 20px !default;
+$font-size-lg: 24px !default;
+$font-size-xl: 28px !default;
+$font-size-xxl: 48px !default;
+
+$font-sizes: (
+  "xs": $font-size-xs,
+  "sm": $font-size-sm,
+  "md": $font-size-md,
+  "lg": $font-size-lg,
+  "xl": $font-size-xl,
+  "xxl": $font-size-xxl
+) !default;

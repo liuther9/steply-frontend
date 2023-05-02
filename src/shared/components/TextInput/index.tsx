@@ -1,9 +1,13 @@
-import { ForwardRefRenderFunction, forwardRef } from 'react'
-import s from './textinput.module.scss'
+import {
+  forwardRef,
+  ForwardRefExoticComponent,
+  HTMLProps,
+  RefAttributes,
+} from 'react';
+import s from './textinput.module.scss';
 
-const CustomInput: ForwardRefRenderFunction<HTMLInputElement, React.HTMLProps<HTMLInputElement>> = (
-	{ ...rest },
-	ref
-) => <input className={s.input} {...rest} ref={ref} />
-
-export default forwardRef(CustomInput)
+export const TextInput: ForwardRefExoticComponent<
+  Omit<HTMLProps<HTMLInputElement>, 'ref'> & RefAttributes<HTMLInputElement>
+> = forwardRef(({ ...rest }, ref) => (
+  <input className={s.input} {...rest} ref={ref} />
+));

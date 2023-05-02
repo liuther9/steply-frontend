@@ -2,10 +2,9 @@
 @use '@/styles/variables' as *;
 .title {
 	font-weight: 700;
-	font-size: 48px;
+	font-size: map.get($font-sizes, "xxl");
 	line-height: 56px;
 	text-align: center;
-	letter-spacing: -0.0032em;
 	color: map.get($grays, "800");
-	margin-bottom: 8px;
+	margin-bottom: map.get($spacings, "lg");
 }

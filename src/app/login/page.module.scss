@@ -1,10 +1,11 @@
+@use 'sass:map';
 @use '@/styles/variables' as *;
 .wrapper {
 	width: 100%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	.container {
+	.login_container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -15,7 +16,6 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			margin-top: 64px;
 			div:first-child {
 				margin-bottom: 20px;
 			}
@@ -34,6 +34,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		flex-wrap: nowrap;
+		white-space: nowrap;
 		.option {
 			font-size: 14px;
 			line-height: 20px;
@@ -41,6 +43,9 @@
 			letter-spacing: -0.0024em;
 			color: $gray-500;
 			flex: 1;
+			&:first-of-type {
+				margin-right: map.get($spacings, "sm");
+			}
 		}
 	}
 }
@@ -51,4 +56,30 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+.label_container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	.label {
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.0024em;
+		color: map.get($grays, "800");
+	}
+	.error {
+		font-size: 12px;
+		color: red;
+		margin-left: auto;
+	}
+}
+
+@media screen and (max-width: map.get($container-max-widths, "md")) {
+	.wrapper {
+		.login_container {
+			align-items: flex-start;
+			padding: 32px 16px;
+		}
+	}
 }

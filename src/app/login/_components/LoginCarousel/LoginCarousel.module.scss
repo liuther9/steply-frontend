@@ -1,3 +1,5 @@
+@use 'sass:map';
+@use '@/styles/variables' as *;
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -5,7 +7,8 @@
 	align-items: center;
 	width: 100%;
 	height: 100%;
-	background-color: #fff;
+	background-image: url('/spiral.png');
+	background-position: center;
 	.container {
 		&_top {
 			width: 100%;
@@ -40,6 +43,29 @@
 			align-items: center;
 			width: 100%;
 			margin: auto;
+		}
+	}
+}
+
+@media screen and (max-width: map.get($container-max-widths, "md")) {
+	.wrapper {
+		padding: 32px 0;
+		.container {
+			&_top {
+				margin: 0;
+				.slider {
+					.slide {
+						.content {
+							width: 100%;
+							align-items: flex-start;
+							padding: map.get($spacings, "md");
+						}
+					}
+				}
+			}
+			&_bot {
+				margin: 0;
+			}
 		}
 	}
 }

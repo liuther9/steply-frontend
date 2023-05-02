@@ -25,4 +25,10 @@
 	&:active {
 		transform: scale(0.95);
 	}
+	&:disabled {
+		background: map.get($grays, "300");
+		border: 1px solid map.get($grays, "300");
+		color: map.get($grays, "500");
+		cursor: not-allowed;
+	}
 }

@@ -1,61 +1,116 @@
-'use client'
+'use client';
 
-import * as Form from '@radix-ui/react-form'
-import { useSupabase } from '@utils/supabase-provider'
-import Button from '@/shared/components/Button'
-import { Title } from '@/shared/components/Title'
-import { Text } from '@/shared/components/Text'
-import s from './page.module.scss'
-import TextInput from '@/shared/components/TextInput'
-import { MISMATCH_TYPES } from '@/shared/components/types'
+import { FormEvent, useState } from 'react';
+import { NextPage } from 'next';
+import * as Form from '@radix-ui/react-form';
+import { useSupabase } from '@utils/supabase-provider';
+import {
+  Button,
+  MISMATCH_TYPES,
+  Text,
+  TextInput,
+  Title,
+} from '@/shared/components';
+import s from './page.module.scss';
 
-const FormDemo = () => {
-	return (
-		<Form.Root
-			className={s.wrapper}
-			onSubmit={(e) => {
-				e.preventDefault()
-				const data = Object.fromEntries(new FormData(e.currentTarget))
-				console.log(data)
-			}}
-		>
-			<Title>Регистрация</Title>
-			<Text>Авторизуйтесь и вам будут доступны все курсы</Text>
-			<Form.Field className={s.container} name='email'>
-				<div className={s.label_container}>
-					<Form.Label className={s.label}>Email</Form.Label>
-					<Form.Message className={s.error} match={MISMATCH_TYPES.VALUE_MISSING}>
-						Пожалуйста, введите ваш email
-					</Form.Message>
-					<Form.Message className={s.error} match={MISMATCH_TYPES.TYPE_MISMATCH}>
-						Пожалуйста, введите корректный email
-					</Form.Message>
-				</div>
-				<Form.Control asChild>
-					<TextInput type='email' required />
-				</Form.Control>
-			</Form.Field>
+const FormDemo: NextPage = () => {
+  const [serverErrors, setServerErrors] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const { supabase } = useSupabase();
 
-			<Form.Field className={s.container} name='password'>
-				<div className={s.label_container}>
-					<Form.Label className={s.label}>Пароль</Form.Label>
-					<Form.Message className={s.error} match={MISMATCH_TYPES.VALUE_MISSING}>
-						Пожалуйста, введите пароль
-					</Form.Message>
-					<Form.Message className={s.error} match={MISMATCH_TYPES.TYPE_MISMATCH}>
-						Пожалуйста, введите корректный пароль
-					</Form.Message>
-				</div>
-				<Form.Control asChild>
-					<TextInput type='password' required />
-				</Form.Control>
-			</Form.Field>
+  const handleSignUp = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const { email, password } = Object.fromEntries(
+      new FormData(e.currentTarget)
+    ) as {
+      email: string;
+      password: string;
+      passwordRepeat: string;
+    };
 
-			<Form.Submit asChild>
-				<Button type='submit'>Зарегестрироваться</Button>
-			</Form.Submit>
-		</Form.Root>
-	)
-}
+    setLoading(true);
+    const { error } = await supabase.auth.signUp({ email, password });
+    error && setServerErrors(true);
+    setLoading(false);
+  };
 
-export default FormDemo
+  return (
+    <Form.Root className={s.wrapper} onSubmit={handleSignUp}>
+      <Title>Регистрация</Title>
+      <Text>Зарегестрируйтесь и вам будут доступны все курсы</Text>
+      <Form.Field
+        className={s.container}
+        name="email"
+        serverInvalid={serverErrors}
+      >
+        <div className={s.label_container}>
+          <Form.Label className={s.label}>Email</Form.Label>
+          <Form.Message
+            className={s.error}
+            match={MISMATCH_TYPES.VALUE_MISSING}
+          >
+            Пожалуйста, введите ваш email
+          </Form.Message>
+          <Form.Message
+            className={s.error}
+            match={MISMATCH_TYPES.TYPE_MISMATCH}
+          >
+            Пожалуйста, введите корректный email
+          </Form.Message>
+          {serverErrors && (
+            <Form.Message className={s.error}>Неверные данные</Form.Message>
+          )}
+        </div>
+        <Form.Control asChild>
+          <TextInput required type="email" />
+        </Form.Control>
+      </Form.Field>
+
+      <Form.Field className={s.container} name="password">
+        <div className={s.label_container}>
+          <Form.Label className={s.label}>Пароль</Form.Label>
+          <Form.Message
+            className={s.error}
+            match={MISMATCH_TYPES.VALUE_MISSING}
+          >
+            Пожалуйста, введите пароль
+          </Form.Message>
+          <Form.Message
+            className={s.error}
+            match={MISMATCH_TYPES.TYPE_MISMATCH}
+          >
+            Пожалуйста, введите корректный пароль
+          </Form.Message>
+        </div>
+        <Form.Control asChild>
+          <TextInput required type="password" />
+        </Form.Control>
+      </Form.Field>
+
+      <Form.Field className={s.container} name="passwordRepeat">
+        <div className={s.label_container}>
+          <Form.Label className={s.label}>Повторите пароль</Form.Label>
+          <Form.Message
+            className={s.error}
+            match={(value, formData) =>
+              value !== formData.getAll('password')[0]
+            }
+          >
+            Пароли должны совпадать
+          </Form.Message>
+        </div>
+        <Form.Control asChild>
+          <TextInput required type="password" />
+        </Form.Control>
+      </Form.Field>
+
+      <Form.Submit asChild>
+        <Button disabled={loading} type="submit">
+          Зарегестрироваться
+        </Button>
+      </Form.Submit>
+    </Form.Root>
+  );
+};
+
+export default FormDemo;
