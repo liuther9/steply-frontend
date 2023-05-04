@@ -2,7 +2,10 @@ import { BiCoin } from 'react-icons/bi';
 import { NextPage } from 'next';
 import s from './page.module.scss';
 
-const Nickname: NextPage = () => {
+export const revalidate = 0;
+
+const Cabinet: NextPage = (p: any) => {
+  console.log(p);
   return (
     <div className={s.wrapper}>
       <h1 className={s.title}>User Name</h1>
@@ -15,4 +18,4 @@ const Nickname: NextPage = () => {
   );
 };
 
-export default Nickname;
+export default Cabinet;
