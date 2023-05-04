@@ -4,6 +4,7 @@
 .hwWrapper {
     display: inline-flex;
     width: 100%;
+   
 }
 
 .hwList {
@@ -20,9 +21,9 @@
     width: 358px;
     height: 176px;
     gap: 8px;
+    position: relative;
 
 }
-
 
 
 .cityName {
@@ -60,8 +61,8 @@
     font-size: 19px;
     color: rgba(149, 149, 149, 1);
     position: absolute;
-    top: 425px;
-    left: 370px;
+    top: 78px;
+    right: 21px;
 
 
 }
