@@ -47,6 +47,6 @@
     },
     "typeRoots": [ "./types", "./node_modules/@types" ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "./src/shared/components/types", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "./src/shared/components/types", "**/*.tsx", ".next/types/**/*.ts", "src/app/cabinet/cardData.js"],
   "exclude": ["node_modules"]
 }
