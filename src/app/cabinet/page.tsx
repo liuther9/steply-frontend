@@ -28,8 +28,7 @@ const data = [
 
 export const revalidate = 0;
 
-const Cabinet: NextPage = (p: any) => {
-  console.log(p);
+const Cabinet: NextPage = () => {
   return (
     <section className={s.section}>
       <div className={s.wrapper}>
