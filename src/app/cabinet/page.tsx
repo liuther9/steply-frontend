@@ -4,27 +4,30 @@ import { NextPage } from 'next';
 import s from './page.module.scss';
 import Card from '../cabinet/_components/index';
 
-const Nickname: NextPage = () => {
-  const data = [
-    {
-      id: 1,
-      cityName: 'Чехия',
-    },
+const data = [
+  {
+    id: 1,
+    cityName: 'Чехия',
+  },
 
-    {
-      id: 2,
-      cityName: 'Профориентация',
-    },
-    {
-      id: 3,
-      cityName: 'Германия',
-    },
-    {
-      id: 4,
-      cityName: 'Турция',
-    },
-  ];
+  {
+    id: 2,
+    cityName: 'Профориентация',
+  },
+  {
+    id: 3,
+    cityName: 'Германия',
+  },
+  {
+    id: 4,
+    cityName: 'Турция',
+  },
+];
 
+export const revalidate = 0;
+
+const Cabinet: NextPage = (p: any) => {
+  console.log(p);
   return (
     <section className={s.section}>
       <div className={s.wrapper}>
@@ -90,4 +93,4 @@ const Nickname: NextPage = () => {
   );
 };
 
-export default Nickname;
+export default Cabinet;
