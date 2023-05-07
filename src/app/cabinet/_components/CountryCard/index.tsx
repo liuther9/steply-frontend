@@ -1,4 +1,4 @@
-import s from './_components/CountryCard.module.scss';
+import s from './CountryCard.module.scss';
 import { Text } from '@/shared/components';
 import { AiOutlineRight } from 'react-icons/ai';
 
