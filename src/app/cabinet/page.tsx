@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { BiCoin } from 'react-icons/bi';
-import { AiOutlineRight } from 'react-icons/ai';
-import { AiOutlineEye } from 'react-icons/ai';
+import { AiOutlineEye, AiOutlineRight } from 'react-icons/ai';
 import { NextPage } from 'next';
 import s from './page.module.scss';
-import Card from '../cabinet/_components/index';
+import Card from './_components/CountryCard';
+import { Text, Title } from '@/shared/components';
 
 const data = [
   {
@@ -32,10 +32,10 @@ const Cabinet: NextPage = () => {
   return (
     <section className={s.section}>
       <div className={s.wrapper}>
-        <h1 className={s.title}>User Name</h1>
+        <Title>{'User Name'}</Title>
         <div className={s.divWrapper}>
           <BiCoin style={{ fontSize: '27px' }} />
-          <p className={s.text}>17 741 steplycoin</p>
+          <Text size="sm">{'17 741 steplycoin'}</Text>
         </div>
         <button className={s.button}>Пройти анкету</button>
       </div>
