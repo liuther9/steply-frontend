@@ -1,52 +1,27 @@
 @use 'sass:map';
 @use '@/styles/variables' as *;
 
-.hwList {
+.wrapper {
   display: flex;
-}
-
-.hwItem {
-  list-style: none;
-  padding: 20px 44px 20px 12px;
+  width: fit-content;
+  padding: map.get($spacings, 'md') map.get($spacings, 'sm');
   margin-right: 8px;
   background: map.get($grays, '100');
   border-radius: 16px;
-  width: 358px;
-  height: 176px;
-  gap: 8px;
   position: relative;
-}
-
-.cityName {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  margin-bottom: map.get($spacings, 'xs');
-  color: map.get($grays, '800');
-}
-
-.phase {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  margin-bottom: map.get($spacings, 'sm');
-  color: map.get($grays, '500');
-}
-
-.hwText {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: map.get($grays, '500');
-}
-
-.reactIcon {
-  font-size: 19px;
-  color: rgba(149, 149, 149, 1);
-  position: absolute;
-  top: 78px;
-  right: 21px;
+  .container {
+    &_left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &_right {
+      display: flex;
+      align-items: center;
+      svg {
+        font-size: map.get($font-sizes, 'md');
+        color: map.get($grays, '500');
+      }
+    }
+  }
 }

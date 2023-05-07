@@ -34,6 +34,30 @@
 	&.bold {
 		font-weight: 700;
 	}
+	&.mb_xs {
+		margin-bottom: map.get($spacings, "xs");
+	}
+	&.mb_sm {
+		margin-bottom: map.get($spacings, "sm");
+	}
+	&.mb_md {
+		margin-bottom: map.get($spacings, "md");
+	}
+	&.mb_lg {
+		margin-bottom: map.get($spacings, "lg");
+	}
+	&.mb_xl {
+		margin-bottom: map.get($spacings, "xl");
+	}
+	&.center {
+		text-align: center;
+	}
+	&.left {
+		text-align: left;
+	}
+	&.right {
+		text-align: right;
+	}
 }
 
 @media screen and (max-width: map.get($container-max-widths, "md")) {

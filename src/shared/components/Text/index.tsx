@@ -14,15 +14,31 @@ enum TEXT_COLOR {
   LIGHT = 'light',
 }
 
+enum SPACINGS {
+  XSMALL = 'mb_xs',
+  SMALL = 'mb_sm',
+  MEDIUM = 'mb_md',
+  LARGE = 'mb_lg',
+  XLARGE = 'mb_xl',
+}
+
 export const Text: FC<{
   children: ReactNode;
   size?: `${TEXT_SIZE}`;
   color?: `${TEXT_COLOR}`;
   bold?: boolean;
-}> = ({ children, size, color, bold }) => {
+  mb?: `${SPACINGS}`;
+  ta?: 'left' | 'center' | 'right';
+}> = ({ children, size, color, bold, mb, ta }) => {
   const sizeProp = size ? ` ${s[size]}` : '';
   const colorProp = color ? ` ${s[color]}` : '';
   const boldProp = bold ? ` ${s.bold}` : '';
+  const mbProp = mb ? ` ${s[mb]}` : '';
+  const taProp = ta ? ` ${s[ta]}` : '';
 
-  return <p className={s.text + sizeProp + colorProp + boldProp}>{children}</p>;
+  return (
+    <p className={s.text + sizeProp + colorProp + boldProp + mbProp + taProp}>
+      {children}
+    </p>
+  );
 };
