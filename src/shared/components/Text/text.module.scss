@@ -7,6 +7,33 @@
 	color: map.get($grays, "800");
 	text-align: center;
 	margin-bottom: map.get($spacings, "lg");
+	&.xs {
+		font-size: map.get($font-sizes, "xs");
+	}
+	&.sm {
+		font-size: map.get($font-sizes, "sm");
+	}
+	&.md {
+		font-size: map.get($font-sizes, "md");
+	}
+	&.lg {
+		font-size: map.get($font-sizes, "lg");
+	}
+	&.xl {
+		font-size: map.get($font-sizes, "xl");
+	}
+	&.xxl {
+		font-size: map.get($font-sizes, "xxl");
+	}
+	&.dark {
+		color: map.get($grays, "800");
+	}
+	&.light {
+		color: map.get($grays, "500");
+	}
+	&.bold {
+		font-weight: 700;
+	}
 }
 
 @media screen and (max-width: map.get($container-max-widths, "md")) {

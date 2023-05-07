@@ -1,8 +1,10 @@
-import { ReactNode, useEffect, useRef, useState } from 'react';
+'use client';
+
+import { FC, ReactNode, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import s from './ModalPortal.module.scss';
 
-function ModalPortal({ children }: { children: ReactNode }) {
+export const ModalPortal: FC<{ children: ReactNode }> = ({ children }) => {
   const ref = useRef<Element | null>(null);
   const [mounted, setMounted] = useState(false);
 
@@ -14,6 +16,4 @@ function ModalPortal({ children }: { children: ReactNode }) {
   return mounted && ref.current
     ? createPortal(<div className={s.wrapper}>{children}</div>, ref.current)
     : null;
-}
-
-export default ModalPortal;
+};

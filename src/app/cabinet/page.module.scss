@@ -2,149 +2,75 @@
 @use '@/styles/variables' as *;
 
 .hwWrapper {
-    display: flex;
-    // width: 100%;
+  display: flex;
 }
 
 .section {
-    width: 100%;
-    padding: 32px 48px;
+  width: 100%;
+  padding: 32px 48px;
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 35px;
-    border-bottom: inset;
-  
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 35px;
+  border-bottom: inset;
 }
 
 .title {
-    margin: 0;
-    font-weight: 860;
-    max-width: 519px;
-    font-size: 48px;
-    line-height: 56px;
-    margin-bottom: 8px;
-    color: map.get($grays, "800");
-
+  margin: 0;
+  font-weight: 860;
+  max-width: 519px;
+  font-size: 48px;
+  line-height: 56px;
+  margin-bottom: 8px;
+  color: map.get($grays, '800');
 }
 
 .divWrapper {
-    display: flex;
-    align-items: center;
-    margin-bottom: 24px;
-    
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
 }
 
 .text {
-    margin-left: 8px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.0032em;
-    color: map.get($grays, "800");
+  margin-left: 8px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.0032em;
+  color: map.get($grays, '800');
 }
 
 .button {
-    width: 400px;
-    height: 48px;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    background-color: #DDE3F9;
-    border: 2px solid #DDE3F9;
-    border-radius: 16px;
-    cursor: pointer;
-    font-style: normal;
-    font-weight: 500;
-    text-align: center;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.0032em;
-    color: #5D63FF;    
+  width: 400px;
+  height: 48px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background-color: #dde3f9;
+  border: 2px solid #dde3f9;
+  border-radius: 16px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.0032em;
+  color: #5d63ff;
 }
-     
-
-// homework div
-
-// .hwWrapper {
-//     display: flex;
-//     width: 100%;
-// }
 
 .hwTitle {
-    margin-bottom: 20px;
-    margin-top: 55px;
-    font-style: normal;
-    font-weight: 860;
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -0.0032em;
-    color: map.get($grays, "800");
+  margin-bottom: 20px;
+  margin-top: 55px;
+  font-style: normal;
+  font-weight: 860;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.0032em;
+  color: map.get($grays, '800');
 }
-
-// .hwList {
-//     display: flex;
-//     flex-direction: row;
-// }
-
-// .hwItem {
-//     list-style: none;
-//     padding: 20px 44px 20px 12px;
-//     margin-right: 8px;
-//     background:  map.get($grays, "100");
-//     border-radius: 16px;
-//     width: 358px;
-//     height: 176px;
-//     gap: 8px;
-
-// }
-
-// .hwItem:last-child{
-//     margin-right: 0px;
-// }
-
-// .cityName {
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 24px;
-//     line-height: 32px;
-//     margin-bottom: 4px;
-//     letter-spacing: 0.0032em;
-//     color: map.get($grays, "800");
-
-// }
-
-// .phase {
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 14px;
-//     line-height: 20px;
-//     margin-bottom: 8px;
-//     letter-spacing: -0.0024em;
-//     color: #959595;
-
-// }
-
-// .hwText {
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 16px;
-//     line-height: 24px;
-//     letter-spacing: -0.0032em;
-//     color: #959595;
-// }
-
-// .reactIcon {
-//     font-size: 19px;
-//     color: rgba(149, 149, 149, 1);
-//     position: absolute;
-//     top: 425px;
-//     left: 370px;
-    
-
-// }
