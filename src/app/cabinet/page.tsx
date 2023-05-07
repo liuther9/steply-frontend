@@ -1,7 +1,6 @@
-import Link from 'next/link';
 import { BiCoin } from 'react-icons/bi';
-import { AiOutlineEye, AiOutlineRight } from 'react-icons/ai';
 import { NextPage } from 'next';
+import { Publication } from '../cabinet/_components/MyPublication/index';
 import s from './page.module.scss';
 import Card from './_components/CountryCard';
 import { Text, Title } from '@/shared/components';
@@ -45,7 +44,8 @@ const Cabinet: NextPage = () => {
           <Card cityName={i.cityName} key={i.id} />
         ))}
       </div>
-      <h3 className={s.hwTitle}>Мои публикации</h3>
+      <Publication />
+      {/* <h3 className={s.hwTitle}>Мои публикации</h3>
       <div className={s.publication}>
         <p className={s.publicationTitle}>Как я тут оказался?</p>
         <span className={s.publicationText}>
@@ -57,7 +57,7 @@ const Cabinet: NextPage = () => {
         <AiOutlineRight className={s.reactIcon} />
         <span className={s.publicationNum}>9780</span>
         <AiOutlineEye className={s.eyeIcon} />
-      </div>
+      </div> */}
     </section>
   );
 };
