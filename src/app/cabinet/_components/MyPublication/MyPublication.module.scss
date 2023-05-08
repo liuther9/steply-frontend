@@ -27,9 +27,10 @@
 .eyeIcon {
     color: rgb(149, 149, 149);
     position: absolute;
-    top: 133px;
-    right: 97px;
-    font-size: 25px;
+    font-size: 23px;
+    color: rgba(149, 149, 149, 1);
+    top: 76%;
+    transform: translateX(224px);
 }
 
 .publicationText {
@@ -43,7 +44,7 @@
 .publicationLink {
     display: block;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: -7px;
     width: 68px;
     height: 32px;
     padding: 4px 8px;
