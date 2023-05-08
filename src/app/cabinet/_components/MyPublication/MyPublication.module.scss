@@ -1,0 +1,69 @@
+@use 'sass:map';
+@use '@/styles/variables' as *;
+
+.publication {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 44px 20px 12px;
+    margin-right: auto;
+    background: map.get($grays, '100');
+    border-radius: 16px;
+    width: 358px;
+    height: 176px;
+    gap: 8px;
+    position: relative;
+}
+
+.publicationTitle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: map.get($font-sizes, "lg");
+    line-height: 32px;
+    margin-bottom: 8px;
+    color: map.get($grays, '800');
+}
+
+.eyeIcon {
+    color: rgb(149, 149, 149);
+    position: absolute;
+    top: 133px;
+    right: 97px;
+    font-size: 25px;
+}
+
+.publicationText {
+    font-style: normal;
+    font-weight: 500;
+    font-size: map.get($font-sizes, "sm");
+    line-height: 24px;
+    color: #959595;
+}
+
+.publicationLink {
+    display: block;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 68px;
+    height: 32px;
+    padding: 4px 8px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5d63ff;
+    background: #dde3f9;
+    border-radius: 100px;
+}
+
+.publicationNum {
+    display: block;
+    top: 134px;
+    right: 53px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: map.get($font-sizes, "sm");
+    line-height: 24px;
+    color: #959595;
+    position: absolute;
+}
