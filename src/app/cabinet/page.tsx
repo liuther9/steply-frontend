@@ -4,7 +4,7 @@ import { Publication } from '../cabinet/_components/MyPublication/index';
 import s from './page.module.scss';
 import Card from './_components/CountryCard';
 import { Text, Title } from '@/shared/components';
-
+import Document from './_components/Document';
 const data = [
   {
     id: 1,
@@ -22,6 +22,35 @@ const data = [
   {
     id: 4,
     cityName: 'Турция',
+  },
+];
+
+const document = [
+  {
+    id: 1,
+    titleDocument: 'Атестат',
+  },
+
+  {
+    id: 2,
+    titleDocument: 'Атестат',
+  },
+  {
+    id: 3,
+    titleDocument: 'Атестат',
+  },
+  {
+    id: 4,
+    titleDocument: 'Атестат',
+  },
+  {
+    id: 5,
+    titleDocument: 'Атестат',
+  },
+
+  {
+    id: 6,
+    titleDocument: 'Атестат',
   },
 ];
 
@@ -45,19 +74,12 @@ const Cabinet: NextPage = () => {
         ))}
       </div>
       <Publication />
-      {/* <h3 className={s.hwTitle}>Мои публикации</h3>
-      <div className={s.publication}>
-        <p className={s.publicationTitle}>Как я тут оказался?</p>
-        <span className={s.publicationText}>
-          Мое путешествие началось во время пандемии...
-        </span>
-        <Link className={s.publicationLink} href="#china">
-          #china
-        </Link>
-        <AiOutlineRight className={s.reactIcon} />
-        <span className={s.publicationNum}>9780</span>
-        <AiOutlineEye className={s.eyeIcon} />
-      </div> */}
+      <h3 className={s.hwTitle}>Ваши документы</h3>
+      <div className={s.hwWrapper}>
+        {document.map(i => (
+          <Document key={i.id} titleDocument={i.titleDocument} />
+        ))}
+      </div>
     </section>
   );
 };
