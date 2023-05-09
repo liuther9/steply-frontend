@@ -28,11 +28,9 @@
 
 .text {
   margin-left: 8px;
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: -0.0032em;
   color: map.get($grays, '800');
 }
 
@@ -48,10 +46,9 @@
   border: 2px solid #dde3f9;
   border-radius: 16px;
   cursor: pointer;
-  font-style: normal;
   font-weight: 500;
   text-align: center;
-  font-size: 16px;
+  font-size: map.get($font-sizes, 'sm');
   line-height: 24px;
   color: #5d63ff;
 }
@@ -59,7 +56,6 @@
 .hwTitle {
   margin-bottom: 20px;
   margin-top: 55px;
-  font-style: normal;
   font-weight: 800;
   font-size: 32px;
   line-height: 40px;
@@ -67,7 +63,7 @@
 }
 
 .reactIcon {
-  font-size: 19px;
+  font-size: map.get($font-sizes, 'md');
   color: rgba(149, 149, 149, 1);
   position: absolute;
   top: 43%;  
