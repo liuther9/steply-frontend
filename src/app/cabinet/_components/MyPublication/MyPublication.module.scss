@@ -2,69 +2,49 @@
 @use '@/styles/variables' as *;
 
 .publication {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 44px 20px 12px;
-    margin-right: auto;
-    background: map.get($grays, '100');
-    border-radius: 16px;
-    width: 358px;
-    height: 176px;
-    gap: 8px;
-    position: relative;
-}
-
-.publicationTitle {
-    font-style: normal;
-    font-weight: 700;
-    font-size: map.get($font-sizes, "lg");
-    line-height: 32px;
-    margin-bottom: 8px;
-    color: map.get($grays, '800');
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: map.get($spacings, 'lg') 44px map.get($spacings, 'lg') 12px;;
+  margin-right: auto;
+  background: map.get($grays, '100');
+  border-radius: 16px;
+  width: 358px;
+  height: 176px;
+  position: relative;
 }
 
 .eyeIcon {
-    color: rgb(149, 149, 149);
-    position: absolute;
-    font-size: 23px;
-    color: rgba(149, 149, 149, 1);
-    top: 76%;
-    transform: translateX(224px);
+  color: rgb(149, 149, 149);
+  position: absolute;
+  font-size: map.get($font-sizes, 'lg');
+  top: 76%;
+  transform: translateX(224px);
 }
 
-.publicationText {
-    font-style: normal;
-    font-weight: 500;
-    font-size: map.get($font-sizes, "sm");
-    line-height: 24px;
-    color: #959595;
-}
 
 .publicationLink {
-    display: block;
-    margin-right: auto;
-    margin-top: -7px;
-    width: 68px;
-    height: 32px;
-    padding: 4px 8px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    color: #5d63ff;
-    background: #dde3f9;
-    border-radius: 100px;
+  display: block;
+  margin-right: auto;
+  margin-top: 8px;
+  width: 68px;
+  height: 32px;
+  padding: 4px 8px;
+  font-weight: 500;
+  font-size: map.get($font-sizes, 'sm');
+  line-height: 24px;
+  color: #5d63ff;
+  background: map.get($grays, '400');;
+  border-radius: 100px;
 }
 
 .publicationNum {
-    display: block;
-    top: 134px;
-    right: 53px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: map.get($font-sizes, "sm");
-    line-height: 24px;
-    color: #959595;
-    position: absolute;
+  display: block;
+  top: 134px;
+  right: 53px;
+  font-weight: 500;
+  font-size: map.get($font-sizes, "sm");
+  line-height: 24px;
+  color: map.get($grays, '500');
+  position: absolute;
 }
