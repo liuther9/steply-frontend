@@ -10,7 +10,7 @@
 
 .section {
   width: 100%;
-  padding: 32px 48px;
+  padding: map.get($spacings, "xxl") map.get($spacings, "xxxl");
 }
 
 .wrapper {
@@ -23,25 +23,5 @@
 .divWrapper {
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: map.get($spacings, "xl");
 }
-
-.hwTitle {
-  margin-bottom: 20px;
-  margin-top: 55px;
-  font-weight: 800;
-  font-size: 32px;
-  line-height: 40px;
-  color: map.get($grays, '800');
-}
-
-.reactIcon {
-  font-size: map.get($font-sizes, 'md');
-  color: rgba(149, 149, 149, 1);
-  position: absolute;
-  top: 43%;  
-  transform: translateX(303px);
-}
-
-
-
