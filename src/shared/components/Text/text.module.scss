@@ -22,8 +22,8 @@
 	&.xl {
 		font-size: map.get($font-sizes, "xl");
 	}
-	&.xxl {
-		font-size: map.get($font-sizes, "xxl");
+	&.xxxl {
+		font-size: map.get($font-sizes, "xxxl");
 	}
 	&.dark {
 		color: map.get($grays, "800");
@@ -33,6 +33,9 @@
 	}
 	&.bold {
 		font-weight: 700;
+	}
+	&.mb_none {
+		margin-bottom: 0;
 	}
 	&.mb_xs {
 		margin-bottom: map.get($spacings, "xs");

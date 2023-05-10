@@ -2,12 +2,14 @@ import s from '../MyPublication/MyPublication.module.scss';
 import style from '../../page.module.scss';
 import Link from 'next/link';
 import { AiOutlineEye, AiOutlineRight } from 'react-icons/ai';
-import { Text } from '@/shared/components';
+import { Text, Title } from '@/shared/components';
 
 export const Publication = () => {
   return (
-    <>
-      <h3 className={style.hwTitle}>Мои публикации</h3>
+    <div className={s.wrapper}>
+      <Title bold component="h2" ta="left">
+        Мои публикации
+      </Title>
       <div className={s.publication}>
         <Text bold color="dark" mb="mb_sm" size="lg">
           Как я тут оказался
@@ -19,10 +21,12 @@ export const Publication = () => {
           #china
         </Link>
         <AiOutlineRight className={style.reactIcon} />
-        <span className={s.publicationNum}>9780</span>
-        <AiOutlineEye className={s.eyeIcon} />
+        <Text color="light" mb="mb_none" size="sm" ta="left">
+          9780
+        </Text>
+        <AiOutlineEye />
       </div>
-    </>
+    </div>
   );
 };
 

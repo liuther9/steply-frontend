@@ -20,6 +20,7 @@ enum SPACINGS {
   MEDIUM = 'mb_md',
   LARGE = 'mb_lg',
   XLARGE = 'mb_xl',
+  NONE = 'mb_none',
 }
 
 export const Text: FC<{

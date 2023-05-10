@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import { Publication } from '../cabinet/_components/MyPublication/index';
 import s from './page.module.scss';
 import Card from './_components/CountryCard';
-import { Text, Title } from '@/shared/components';
+import { Button, Text, Title } from '@/shared/components';
 import Document from './_components/Document';
 const data = [
   {
@@ -60,21 +60,27 @@ const Cabinet: NextPage = () => {
   return (
     <section className={s.section}>
       <div className={s.wrapper}>
-        <Title>{'User Name'}</Title>
+        <Title ta="left">{'User Name'}</Title>
         <div className={s.divWrapper}>
-          <BiCoin style={{ fontSize: '27px' }} />
-          <Text size="sm">{'17 741 steplycoin'}</Text>
+          <BiCoin />
+          <Text mb="mb_none" size="sm">
+            {'17 741 steplycoin'}
+          </Text>
         </div>
-        <button className={s.button}>Пройти анкету</button>
+        <Button variant="purple">Пройти анкету</Button>
       </div>
-      <h2 className={s.hwTitle}>Домашние работы</h2>
+      <Title bold component="h2" ta="left">
+        Домашние работы
+      </Title>
       <div className={s.hwWrapper}>
         {data.map(i => (
           <Card cityName={i.cityName} key={i.id} />
         ))}
       </div>
       <Publication />
-      <h3 className={s.hwTitle}>Ваши документы</h3>
+      <Title bold component="h2" ta="left">
+        Ваши документы
+      </Title>
       <div className={s.hwWrapper}>
         {document.map(i => (
           <Document key={i.id} titleDocument={i.titleDocument} />

@@ -2,9 +2,25 @@
 @use '@/styles/variables' as *;
 .title {
 	font-weight: 700;
-	font-size: map.get($font-sizes, "xxl");
+	font-size: map.get($font-sizes, "xxxl");
 	line-height: 56px;
 	text-align: center;
 	color: map.get($grays, "800");
 	margin-bottom: map.get($spacings, "lg");
+	&.center {
+		text-align: center;
+	}
+	&.left {
+		text-align: left;
+	}
+	&.right {
+		text-align: right;
+	}
+	&.h2 {
+		font-size: map.get($font-sizes, "xxl");
+		line-height: 40px;
+	}
+	&.bold {
+		font-weight: 800;
+	}
 }

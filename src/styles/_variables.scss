@@ -33,6 +33,16 @@ $greens: (
   "300": $green-300
 ) !default;
 
+$purple-100: #DDE3F9 !default;
+$purple-300: #bdc6e4 !default;
+$purple-500: #5d63ff !default;
+
+$purples: (
+  "100": $purple-100,
+  "300": $purple-300,
+  "500": $purple-500,
+) !default;
+
 $theme-colors: (
   "success": #28a745,
   "info": #17a2b8,
@@ -63,11 +73,6 @@ $grid-breakpoints: (
 ) !default;
 // scss-docs-end grid-breakpoints
 
-
-// Grid containers
-//
-// Define the maximum width of `.container` for different screen sizes.
-
 // scss-docs-start container-max-widths
 $container-max-widths: (
   sm: 540px,
@@ -93,13 +98,15 @@ $spacing-sm: 10px !default;
 $spacing-md: 15px !default;
 $spacing-lg: 20px !default;
 $spacing-xl: 25px !default;
+$spacing-xxxl: 48px !default;
 
 $spacings: (
   "xs": $spacing-xs,
   "sm": $spacing-sm,
   "md": $spacing-md,
   "lg": $spacing-lg,
-  "xl": $spacing-xl
+  "xl": $spacing-xl,
+  "xxxl": $spacing-xxxl
 ) !default;
 
 // font-sizes
@@ -108,7 +115,8 @@ $font-size-sm: 16px !default;
 $font-size-md: 20px !default;
 $font-size-lg: 24px !default;
 $font-size-xl: 28px !default;
-$font-size-xxl: 48px !default;
+$font-size-xxl: 32px !default;
+$font-size-xxxl: 48px !default;
 
 $font-sizes: (
   "xs": $font-size-xs,
@@ -116,5 +124,18 @@ $font-sizes: (
   "md": $font-size-md,
   "lg": $font-size-lg,
   "xl": $font-size-xl,
-  "xxl": $font-size-xxl
+  "xxl": $font-size-xxl,
+  "xxxl": $font-size-xxxl
+) !default;
+
+$border-radius-sm: 8px !default;
+$border-radius-md: 16px !default;
+$border-radius-lg: 24px !default;
+$border-radius-max: 100px !default;
+
+$border-radiuses: (
+  "sm": $border-radius-sm,
+  "md": $border-radius-md,
+  "lg": $border-radius-lg,
+  "max": $border-radius-max
 ) !default;

@@ -1,12 +1,17 @@
 @use 'sass:map';
 @use '@/styles/variables' as *;
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: map.get($spacings, 'xxxl');
+}
+
 .publication {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: map.get($spacings, 'lg') 44px map.get($spacings, 'lg') 12px;;
-  margin-right: auto;
+  padding: map.get($spacings, 'lg') map.get($spacings, 'lg');
   background: map.get($grays, '100');
   border-radius: 16px;
   width: 358px;
@@ -14,26 +19,12 @@
   position: relative;
 }
 
-.eyeIcon {
-  color: rgb(149, 149, 149);
-  position: absolute;
-  font-size: map.get($font-sizes, 'lg');
-  top: 76%;
-  transform: translateX(224px);
-}
-
-
 .publicationLink {
-  display: block;
-  margin-right: auto;
-  margin-top: 8px;
-  width: 68px;
-  height: 32px;
-  padding: 4px 8px;
+  margin-top: map.get($spacings, 'sm');
+  padding: map.get($spacings, 'xs') map.get($spacings, 'sm');
   font-weight: 500;
   font-size: map.get($font-sizes, 'sm');
-  line-height: 24px;
-  color: #5d63ff;
+  color: map.get($purples, "500");
   background: map.get($grays, '400');;
   border-radius: 100px;
 }

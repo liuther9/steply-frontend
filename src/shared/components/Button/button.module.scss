@@ -11,8 +11,7 @@
 	border-radius: 16px;
 	border: 1px solid transparent;
 	font-weight: 500;
-	font-size: 16px;
-	line-height: 24px;
+	font-size: map.get($font-sizes, "sm");
 	color: $white;
 	transition: all 0.1s linear;
 	margin: 0 0 32px;
@@ -30,5 +29,14 @@
 		border: 1px solid map.get($grays, "300");
 		color: map.get($grays, "500");
 		cursor: not-allowed;
+	}
+	&.purple {
+		background-color: map.get($purples, '100');
+		color: map.get($purples, "500");
+		&:hover,
+		&:active {
+			border: 1px solid map.get($purples, "100");
+			background: map.get($purples, "300");
+		}
 	}
 }
