@@ -8,7 +8,9 @@ export const BlockContainer: FC<{ children: ReactNode; title: string }> = ({
 }) => {
   return (
     <div className={s.wrapper}>
-      <Title>{title}</Title>
+      <Title bold component="h2" ta="left">
+        {title}
+      </Title>
       <div className={s.container}>{children}</div>
     </div>
   );

@@ -4,24 +4,24 @@
 .documentDiv {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: map.get($spacings, 'lg') 44px map.get($spacings, 'lg') 12px;
-  margin-right: 16px;
+  padding: map.get($spacings, 'lg');
+  margin-right: map.get($spacings, 'md');
   background: map.get($grays, '100');
-  border-radius: 16px;
+  border-radius: map.get($border-radiuses, 'md');
   width: 200px;
   height: 176px;
-  position: relative;
+  .container {
+    &_top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      .cupIcon {
+        font-size: map.get($font-sizes, 'lg');
+        color: $white;
+        background-color: #ffc329;
+        border-radius: map.get($border-radiuses, 'max');
+      }      
+    }
+  }
 }
-
-.cupIcon {
-  padding: 1px;
-  font-size: map.get($font-sizes, 'lg');
-  color: $white;
-  position: absolute;
-  top: 12%;
-  transform: translateX(20px);
-  background-color: #FFC329;
-  border-radius: 100px;
-}
-

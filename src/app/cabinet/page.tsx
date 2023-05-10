@@ -1,10 +1,11 @@
 import { BiCoin } from 'react-icons/bi';
 import { NextPage } from 'next';
-import { Publication } from '../cabinet/_components/MyPublication/index';
+import { Publication } from './_components/Publication/index';
 import s from './page.module.scss';
 import Card from './_components/CountryCard';
 import { Button, Text, Title } from '@/shared/components';
 import Document from './_components/Document';
+import { BlockContainer } from './_components/BlockContainer';
 const data = [
   {
     id: 1,
@@ -69,23 +70,21 @@ const Cabinet: NextPage = () => {
         </div>
         <Button variant="purple">Пройти анкету</Button>
       </div>
-      <Title bold component="h2" ta="left">
-        Домашние работы
-      </Title>
-      <div className={s.hwWrapper}>
+      <BlockContainer title="Домашние работы">
         {data.map(i => (
           <Card cityName={i.cityName} key={i.id} />
         ))}
-      </div>
-      <Publication />
-      <Title bold component="h2" ta="left">
-        Ваши документы
-      </Title>
-      <div className={s.hwWrapper}>
+      </BlockContainer>
+      <BlockContainer title="Мои публикации">
+        {data.map(i => (
+          <Publication key={i.id} />
+        ))}
+      </BlockContainer>
+      <BlockContainer title="Ваши документы">
         {document.map(i => (
           <Document key={i.id} titleDocument={i.titleDocument} />
         ))}
-      </div>
+      </BlockContainer>
     </section>
   );
 };

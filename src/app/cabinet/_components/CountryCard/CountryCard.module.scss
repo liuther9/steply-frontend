@@ -4,11 +4,11 @@
 .wrapper {
   display: flex;
   width: fit-content;
+  min-width: 350px;
   padding: map.get($spacings, 'md') map.get($spacings, 'sm');
-  margin-right: 8px;
+  margin-right: map.get($spacings, 'md');
   background: map.get($grays, '100');
-  border-radius: 16px;
-  position: relative;
+  border-radius: map.get($border-radiuses, 'md');
   .container {
     &_left {
       display: flex;

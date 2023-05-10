@@ -1,0 +1,52 @@
+@use 'sass:map';
+@use '@/styles/variables' as *;
+
+.wrapper {
+  display: flex;
+  width: fit-content;
+  min-width: 350px;
+  padding: map.get($spacings, 'md') map.get($spacings, 'sm');
+  margin-right: map.get($spacings, 'md');
+  background: map.get($grays, '100');
+  border-radius: map.get($border-radiuses, 'md');
+  .container {
+    &_left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &_right {
+      display: flex;
+      align-items: center;
+      svg {
+        font-size: map.get($font-sizes, 'md');
+        color: map.get($grays, '500');
+      }
+    }
+    &_bot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      .view_counter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          font-size: map.get($font-sizes, 'md');
+          color: map.get($grays, '500');
+        }
+      }
+    }
+  }
+}
+
+.publicationLink {
+  margin-top: map.get($spacings, 'sm');
+  padding: map.get($spacings, 'xs') map.get($spacings, 'sm');
+  font-weight: 500;
+  font-size: map.get($font-sizes, 'sm');
+  color: map.get($purples, "500");
+  background: map.get($purples, '100');;
+  border-radius: map.get($border-radiuses, 'max');
+}

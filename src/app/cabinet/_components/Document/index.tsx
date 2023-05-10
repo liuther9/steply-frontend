@@ -6,10 +6,12 @@ const Document = ({ titleDocument }: { titleDocument: string }) => {
   return (
     <>
       <div className={s.documentDiv}>
-        <Text bold color="dark" mb="mb_sm" size="lg">
-          {titleDocument}
+        <div className={s.container_top}>
+          <Text bold color="dark" mb="mb_sm" size="lg">
+            {titleDocument}
+          </Text>
           <GiTrophyCup className={s.cupIcon} />
-        </Text>
+        </div>
 
         <Text color="light" size="sm" ta="left">
           За пройденный курс по Профориентации. Вы большой молодец!
