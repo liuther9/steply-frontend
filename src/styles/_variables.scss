@@ -98,6 +98,7 @@ $spacing-sm: 10px !default;
 $spacing-md: 15px !default;
 $spacing-lg: 20px !default;
 $spacing-xl: 25px !default;
+$spacing-xxl: 32px !default;
 $spacing-xxxl: 48px !default;
 
 $spacings: (
@@ -106,6 +107,7 @@ $spacings: (
   "md": $spacing-md,
   "lg": $spacing-lg,
   "xl": $spacing-xl,
+  "xxl": $spacing-xxl,
   "xxxl": $spacing-xxxl
 ) !default;
 

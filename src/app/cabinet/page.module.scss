@@ -3,7 +3,7 @@
 
 .section {
   width: 100%;
-  padding: 32px 48px;
+  padding: map.get($spacings, "xxl") map.get($spacings, "xxxl");
   .wrapper{
       display: flex;
       flex-direction: column;
