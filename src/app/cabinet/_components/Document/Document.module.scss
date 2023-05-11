@@ -4,7 +4,7 @@
 .documentDiv {
   display: flex;
   flex-direction: column;
-  padding: map.get($spacings, 'lg');
+  padding: map.get($spacings, 'md') map.get($spacings, 'sm');
   margin-right: map.get($spacings, 'md');
   background: map.get($grays, '100');
   border-radius: map.get($border-radiuses, 'md');
@@ -22,6 +22,22 @@
         background-color: #ffc329;
         border-radius: map.get($border-radiuses, 'max');
       }      
+    }
+  }
+}
+
+@media screen and (max-width: map.get($container-max-widths, "md")) {
+  .documentDiv {
+    margin-bottom: 8px;
+    margin-right: 0;
+    width: 100%;
+    .container{
+     &_top {
+      justify-content: flex-start;
+      .cupIcon{
+        margin-left: 10px;
+      }
+     }
     }
   }
 }

@@ -68,7 +68,9 @@ const Cabinet: NextPage = () => {
             {'17 741 steplycoin'}
           </Text>
         </div>
-        <Button variant="purple">Пройти анкету</Button>
+        <div className={s.buttonWrapper}>
+          <Button variant="purple">Пройти анкету</Button>
+        </div>
       </div>
       <BlockContainer title="Домашние работы">
         {data.map(i => (

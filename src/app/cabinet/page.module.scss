@@ -1,27 +1,33 @@
 @use 'sass:map';
 @use '@/styles/variables' as *;
 
-.hwWrapper {
-  display: flex;
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
 .section {
   width: 100%;
   padding: map.get($spacings, "xxl") map.get($spacings, "xxxl");
-}
+  .wrapper{
+      display: flex;
+      flex-direction: column;
+      border-bottom: inset;
+      margin-bottom: map.get($spacings, "xxxl");
+      .divWrapper{
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+        .buttonWrapper{
+          display: flex;
+        }
+      }
+    }
+  }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  border-bottom: inset;
-  margin-bottom: map.get($spacings, "xxxl");
-}
-
-.divWrapper {
-  display: flex;
-  align-items: center;
-  margin-bottom: map.get($spacings, "xl");
+@media screen and (max-width: map.get($container-max-widths, "md")) {
+  .section {
+    padding: 24px 16px 24px 16px;
+    .wrapper {
+      align-items: flex-start;
+      .buttonWrapper {
+        width: 100%;
+      }
+    }
+  }
 }

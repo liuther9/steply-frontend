@@ -50,3 +50,11 @@
   background: map.get($purples, '100');;
   border-radius: map.get($border-radiuses, 'max');
 }
+
+@media screen and (max-width: map.get($container-max-widths, "md")) {
+    .wrapper {
+        margin-bottom: 8px;
+        margin-right: 0;
+        min-width: auto;
+      }
+}

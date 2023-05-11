@@ -12,3 +12,11 @@
 		overflow-y: hidden;
 	}	
 }
+
+@media screen and (max-width: map.get($container-max-widths, "md")) {
+ .wrapper{
+	.container{
+		flex-direction: column;
+	}
+ }	
+}

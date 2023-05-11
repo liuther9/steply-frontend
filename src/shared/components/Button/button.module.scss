@@ -40,3 +40,9 @@
 		}
 	}
 }
+
+@media screen and (max-width: map.get($container-max-widths, "md")) {
+	.button {
+		width: 100%;
+	}
+}
