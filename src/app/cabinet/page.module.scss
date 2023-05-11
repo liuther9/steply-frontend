@@ -1,47 +1,33 @@
 @use 'sass:map';
 @use '@/styles/variables' as *;
 
-.hwWrapper {
-  display: flex;
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
 .section {
   width: 100%;
   padding: 32px 48px;
+  .wrapper{
+      display: flex;
+      flex-direction: column;
+      border-bottom: inset;
+      margin-bottom: map.get($spacings, "xxxl");
+      .divWrapper{
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+        .buttonWrapper{
+          display: flex;
+        }
+      }
+    }
+  }
+
+@media screen and (max-width: map.get($container-max-widths, "md")) {
+  .section {
+    padding: 24px 16px 24px 16px;
+    .wrapper {
+      align-items: flex-start;
+      .buttonWrapper {
+        width: 100%;
+      }
+    }
+  }
 }
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  border-bottom: inset;
-  margin-bottom: map.get($spacings, "xxxl");
-}
-
-.divWrapper {
-  display: flex;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.hwTitle {
-  margin-bottom: 20px;
-  margin-top: 55px;
-  font-weight: 800;
-  font-size: 32px;
-  line-height: 40px;
-  color: map.get($grays, '800');
-}
-
-.reactIcon {
-  font-size: map.get($font-sizes, 'md');
-  color: rgba(149, 149, 149, 1);
-  position: absolute;
-  top: 43%;  
-  transform: translateX(303px);
-}
-
-
-
