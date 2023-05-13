@@ -4,21 +4,21 @@
 .section {
   width: 100%;
   padding: map.get($spacings, "xxl") map.get($spacings, "xxxl");
-  .wrapper{
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    border-bottom: inset;
+    margin-bottom: map.get($spacings, "xxxl");
+    .divWrapper {
       display: flex;
-      flex-direction: column;
-      border-bottom: inset;
-      margin-bottom: map.get($spacings, "xxxl");
-      .divWrapper{
+      align-items: center;
+      margin-bottom: 24px;
+      .buttonWrapper {
         display: flex;
-        align-items: center;
-        margin-bottom: 24px;
-        .buttonWrapper{
-          display: flex;
-        }
       }
     }
   }
+}
 
 @media screen and (max-width: map.get($container-max-widths, "md")) {
   .section {
