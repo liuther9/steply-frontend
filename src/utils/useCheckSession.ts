@@ -7,5 +7,5 @@ export const useCheckSession = async () => {
 
 	const { data } = await supabase.auth.getSession()
 
-	data && router.push('/cabinet')
+	data.session && router.push('/cabinet')
 }
