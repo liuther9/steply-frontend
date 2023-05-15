@@ -1,0 +1,11 @@
+@use 'sass:map';
+@use '@/styles/variables' as *;
+
+.StrimSection {
+  width: 100%;
+  padding: map.get($spacings, "xxl") map.get($spacings, "xxxl");
+  .strimWrap{
+	margin-bottom: map.get($spacings, "xl");
+	width: 357px;
+  }
+}
