@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import s from '../stream/page.module.scss'
+import s from './page.module.scss'
 import { Text, Title } from '@/shared/components'
 import SearchBar from './_components/SearchBar'
 
