@@ -6,6 +6,7 @@
 	align-items: center;
 	justify-content: flex-start;
 	position: relative;
+	margin-bottom: 16px;
 	.inputIcon{
 		font-size: map.get($font-sizes, 'md');
 		color: map.get($grays, '500');
