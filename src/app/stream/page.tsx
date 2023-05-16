@@ -1,9 +1,9 @@
 import { NextPage } from 'next'
-import s from '../strim/page.module.scss'
+import s from '../stream/page.module.scss'
 import { Text, Title } from '@/shared/components'
-import TextInputStrim from './_components/TextInput'
+import SearchBar from './_components/SearchBar'
 
-const Strim: NextPage = () => {
+const Stream: NextPage = () => {
 	return (
 		<section className={s.StrimSection}>
 			<div className={s.strimWrap}>
@@ -12,9 +12,9 @@ const Strim: NextPage = () => {
 					Смотрите обучающие стримы от квалифицированных преподователей
 				</Text>
 			</div>
-			<TextInputStrim />
+			<SearchBar />
 		</section>
 	)
 }
 
-export default Strim
+export default Stream

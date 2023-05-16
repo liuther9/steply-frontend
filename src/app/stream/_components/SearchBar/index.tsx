@@ -1,8 +1,8 @@
-import s from '../TextInput/TextInput.module.scss'
+import s from '../SearchBar/SearchBar.module.scss'
 // import React, { useState } from 'react';
 import { SlMagnifier } from 'react-icons/sl'
 
-const TextInputStrim = () => {
+const SearchBar = () => {
 	return (
 		<div className={s.inputWrap}>
 			<SlMagnifier className={s.inputIcon} />
@@ -11,4 +11,4 @@ const TextInputStrim = () => {
 	)
 }
 
-export default TextInputStrim
+export default SearchBar

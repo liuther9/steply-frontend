@@ -19,5 +19,6 @@
 		border: 1px solid transparent;
 		border-radius: 12px;
 		padding: 8px 8px 8px 36px;
+		outline: map.get($grays, '400');
 	}
 }
