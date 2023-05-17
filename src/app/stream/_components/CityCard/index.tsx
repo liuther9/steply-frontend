@@ -1,4 +1,4 @@
-import s from '../ CityCard/page.module.scss'
+import s from '../CityCard/page.module.scss'
 import { Text } from '@/shared/components'
 
 interface ICityCardProps {
