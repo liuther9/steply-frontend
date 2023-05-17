@@ -1,0 +1,24 @@
+@use 'sass:map';
+@use '@/styles/variables' as *;
+
+.cityWrapp{
+	display: flex;
+	margin-bottom: 40px;
+	border-bottom: inset;
+}	.wrapper {
+		display: flex;
+		width: fit-content;
+		width: 280px;
+		padding: map.get($spacings, 'md') map.get($spacings, 'sm');
+		margin-right: map.get($spacings, 'md');
+		margin-bottom: map.get($spacings, 'lg');
+		background: map.get($grays, '100');
+		border-radius: map.get($border-radiuses, 'md');
+		.container {
+			&_left {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			}
+	}
+}
