@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from 'react'
 import { NextPage } from 'next'
+import { PatternFormat } from 'react-number-format'
 import * as Form from '@radix-ui/react-form'
 import { useSupabase } from '@utils/supabase-provider'
 import { Button, MISMATCH_TYPES, Text, TextInput, Title } from '@/shared/components'
@@ -11,25 +12,28 @@ import { useCheckSession } from '@/utils'
 
 const SignUpPage: NextPage = () => {
 	const [serverErrors, setServerErrors] = useState(false)
+	const [maskedInput, setMaskedInput] = useState('')
 	const [loading, setLoading] = useState(false)
 	const { supabase } = useSupabase()
 	const router = useRouter()
 
-	useCheckSession()
+	// useCheckSession()
 
 	const handleSignUp = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
-		const { email, password } = Object.fromEntries(new FormData(e.currentTarget)) as {
+		const { email, password, phone } = Object.fromEntries(new FormData(e.currentTarget)) as {
 			email: string
 			password: string
 			passwordRepeat: string
+			phone: string
 		}
+		console.log('first', phone)
 
-		setLoading(true)
-		const { error } = await supabase.auth.signUp({ email, password })
-		error && setServerErrors(true)
-		setLoading(false)
-		!error && router.push(`/signup/confirm?email=${email}`)
+		// setLoading(true)
+		// const { error } = await supabase.auth.signUp({ email, password })
+		// error && setServerErrors(true)
+		// setLoading(false)
+		// !error && router.push(`/signup/confirm?email=${email}`)
 	}
 
 	return (
@@ -50,6 +54,14 @@ const SignUpPage: NextPage = () => {
 				<Form.Control asChild>
 					<TextInput required type='email' />
 				</Form.Control>
+			</Form.Field>
+
+			<Form.Field className={s.container} name='phone'>
+				<div className={s.label_container}>
+					<Form.Label className={s.label}>Номер телефона</Form.Label>
+					<Form.Message className={s.error}>Пароли должны совпадать</Form.Message>
+				</div>
+				<PatternFormat allowEmptyFormatting className={s.phone_mask} format='+7 (###) #### ###' mask='_' />
 			</Form.Field>
 
 			<Form.Field className={s.container} name='password'>

@@ -2,27 +2,160 @@ import { NextPage } from 'next'
 import s from './page.module.scss'
 import { Text, Title } from '@/shared/components'
 import SearchBar from './_components/SearchBar'
-// import CityCard from './_components/ CityCard'
+import CityCard from './_components/CityCard'
 
-// const city = [
-// 	{
-// 		id: 1,
-// 		cityTitle: 'Чехия',
-// 	},
-
-// 	{
-// 		id: 2,
-// 		cityTitle: 'Испания',
-// 	},
-// 	{
-// 		id: 3,
-// 		cityTitle: 'Китай',
-// 	},
-// 	{
-// 		id: 4,
-// 		cityTitle: 'Франция',
-// 	},
-// ]
+const data = [
+	{
+		id: 0,
+		name: 'Chezh',
+		steps: [
+			{
+				id: 0,
+				title: 'Этап 0',
+			},
+			{
+				id: 1,
+				title: 'Этап 1',
+			},
+			{
+				id: 2,
+				title: 'Этап 2',
+			},
+			{
+				id: 3,
+				title: 'Этап 3',
+			},
+			{
+				id: 4,
+				title: 'Этап 4',
+			},
+			{
+				id: 5,
+				title: 'Этап 5',
+			},
+		],
+	},
+	{
+		id: 1,
+		name: 'Spain',
+		steps: [
+			{
+				id: 0,
+				title: 'Этап 0',
+			},
+			{
+				id: 1,
+				title: 'Этап 1',
+			},
+			{
+				id: 2,
+				title: 'Этап 2',
+			},
+			{
+				id: 3,
+				title: 'Этап 3',
+			},
+			{
+				id: 4,
+				title: 'Этап 4',
+			},
+			{
+				id: 5,
+				title: 'Этап 5',
+			},
+		],
+	},
+	{
+		id: 2,
+		name: 'China',
+		steps: [
+			{
+				id: 0,
+				title: 'Этап 0',
+			},
+			{
+				id: 1,
+				title: 'Этап 1',
+			},
+			{
+				id: 2,
+				title: 'Этап 2',
+			},
+			{
+				id: 3,
+				title: 'Этап 3',
+			},
+			{
+				id: 4,
+				title: 'Этап 4',
+			},
+			{
+				id: 5,
+				title: 'Этап 5',
+			},
+		],
+	},
+	{
+		id: 3,
+		name: 'France',
+		steps: [
+			{
+				id: 0,
+				title: 'Этап 0',
+			},
+			{
+				id: 1,
+				title: 'Этап 1',
+			},
+			{
+				id: 2,
+				title: 'Этап 2',
+			},
+			{
+				id: 3,
+				title: 'Этап 3',
+			},
+			{
+				id: 4,
+				title: 'Этап 4',
+			},
+			{
+				id: 5,
+				title: 'Этап 5',
+			},
+		],
+	},
+	{
+		id: 4,
+		name: 'Chezh',
+		steps: [
+			{
+				id: 0,
+				title: 'Этап 0',
+			},
+			{
+				id: 1,
+				title: 'Этап 1',
+			},
+			{
+				id: 2,
+				title: 'Этап 2',
+			},
+			{
+				id: 3,
+				title: 'Этап 3',
+			},
+			{
+				id: 4,
+				title: 'Этап 4',
+			},
+			{
+				id: 5,
+				title: 'Этап 5',
+			},
+		],
+	},
+]
 
 const Stream: NextPage = () => {
 	return (
@@ -35,7 +168,9 @@ const Stream: NextPage = () => {
 			</div>
 			<SearchBar />
 
-			{/* <CityCard cityTitle={} id={} /> */}
+			{data.map((item) => (
+				<CityCard city={item} key={item.id} />
+			))}
 		</section>
 	)
 }
