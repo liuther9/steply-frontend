@@ -1,6 +1,11 @@
 @use 'sass:map';
 @use '@/styles/variables' as *;
-
+.title_container {
+	display: flex;
+	:first-child {
+		margin-right: map.get($spacings, 'sm');
+	}
+}
 .cityWrapp{
 	display: flex;
 	margin-bottom: 40px;

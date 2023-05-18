@@ -1,5 +1,6 @@
 import s from '../CityCard/page.module.scss'
 import { Text } from '@/shared/components'
+import Image from 'next/image'
 
 interface ICityCardProps {
 	city: {
@@ -15,9 +16,12 @@ interface ICityCardProps {
 const CityCard: React.FC<ICityCardProps> = ({ city: { name, steps } }) => {
 	return (
 		<>
-			<Text bold color='dark' mb='mb_sm' size='lg' ta='left'>
-				{name}
-			</Text>
+			<div className={s.title_container}>
+				<Text bold color='dark' mb='mb_sm' size='lg' ta='left'>
+					{name}
+				</Text>
+				<Image alt={name} height={24} src={`/flags/${name}.svg`} width={32} />
+			</div>
 			<div className={s.cityWrapp}>
 				{steps.map((step) => (
 					<div className={s.wrapper} key={step.id}>

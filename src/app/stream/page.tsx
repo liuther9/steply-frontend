@@ -7,7 +7,7 @@ import CityCard from './_components/CityCard'
 const data = [
 	{
 		id: 0,
-		name: 'Chezh',
+		name: 'Czech',
 		steps: [
 			{
 				id: 0,
