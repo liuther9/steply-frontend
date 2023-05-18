@@ -6,6 +6,7 @@ interface ICityCardProps {
 	city: {
 		id: number
 		name: string
+		title: string
 		steps: {
 			id: number
 			title: string
@@ -13,14 +14,14 @@ interface ICityCardProps {
 	}
 }
 
-const CityCard: React.FC<ICityCardProps> = ({ city: { name, steps } }) => {
+const CityCard: React.FC<ICityCardProps> = ({ city: { name, steps, title } }) => {
 	return (
 		<>
 			<div className={s.title_container}>
 				<Text bold color='dark' mb='mb_sm' size='lg' ta='left'>
-					{name}
+					{title}
 				</Text>
-				<Image alt={name} height={24} src={`/flags/${name}.svg`} width={32} />
+				<Image alt={name} className={s.imageWrap} height={24} src={`/flags/${name}.svg`} width={32} />
 			</div>
 			<div className={s.cityWrapp}>
 				{steps.map((step) => (

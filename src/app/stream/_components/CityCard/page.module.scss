@@ -2,8 +2,15 @@
 @use '@/styles/variables' as *;
 .title_container {
 	display: flex;
+	position: relative;
 	:first-child {
 		margin-right: map.get($spacings, 'sm');
+	}
+	.imageWrap{
+		top: 3px;
+		color: transparent;
+		position: absolute;
+		left: 88px;
 	}
 }
 .cityWrapp{
@@ -19,11 +26,25 @@
 		margin-bottom: map.get($spacings, 'lg');
 		background: map.get($grays, '100');
 		border-radius: map.get($border-radiuses, 'md');
+		background-image: url('../../../../../public/circle.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: bottom right 1px;
+		background-size: 86px;
+		:first-child{
+			background-image: url('../../../../../public//wave.png');
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: bottom right 1px;
+			background-size: 86px;
+		}
 		.container {
 			&_left {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
 			}
+		
 	}
+	
 }
