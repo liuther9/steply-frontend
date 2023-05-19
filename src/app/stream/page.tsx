@@ -8,6 +8,7 @@ const data = [
 	{
 		id: 0,
 		name: 'Czech',
+		title: 'Чехия',
 		steps: [
 			{
 				id: 0,
@@ -38,6 +39,7 @@ const data = [
 	{
 		id: 1,
 		name: 'Spain',
+		title: 'Испания',
 		steps: [
 			{
 				id: 0,
@@ -68,6 +70,7 @@ const data = [
 	{
 		id: 2,
 		name: 'China',
+		title: 'Китай',
 		steps: [
 			{
 				id: 0,
@@ -98,36 +101,7 @@ const data = [
 	{
 		id: 3,
 		name: 'France',
-		steps: [
-			{
-				id: 0,
-				title: 'Этап 0',
-			},
-			{
-				id: 1,
-				title: 'Этап 1',
-			},
-			{
-				id: 2,
-				title: 'Этап 2',
-			},
-			{
-				id: 3,
-				title: 'Этап 3',
-			},
-			{
-				id: 4,
-				title: 'Этап 4',
-			},
-			{
-				id: 5,
-				title: 'Этап 5',
-			},
-		],
-	},
-	{
-		id: 4,
-		name: 'Chezh',
+		title: 'Франция',
 		steps: [
 			{
 				id: 0,
