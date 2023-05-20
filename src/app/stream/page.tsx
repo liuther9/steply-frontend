@@ -1,10 +1,10 @@
 import { NextPage } from 'next'
 import s from './page.module.scss'
 import { Text, Title } from '@/shared/components'
-import SearchBar from './_components/SearchBar'
-import CityCard from './_components/CityCard'
+import { CountryTracker, SearchBar } from './_components'
+import { ICountryTracker } from './_types'
 
-const data = [
+const data: ICountryTracker[] = [
 	{
 		id: 0,
 		name: 'Czech',
@@ -12,26 +12,34 @@ const data = [
 		steps: [
 			{
 				id: 0,
+				live: true,
+				status: 'completed',
 				title: 'Этап 0',
 			},
 			{
 				id: 1,
+				live: true,
+				status: 'in_progress',
 				title: 'Этап 1',
 			},
 			{
 				id: 2,
+				live: false,
 				title: 'Этап 2',
 			},
 			{
 				id: 3,
+				live: false,
 				title: 'Этап 3',
 			},
 			{
 				id: 4,
+				live: false,
 				title: 'Этап 4',
 			},
 			{
 				id: 5,
+				live: false,
 				title: 'Этап 5',
 			},
 		],
@@ -43,26 +51,32 @@ const data = [
 		steps: [
 			{
 				id: 0,
+				live: false,
 				title: 'Этап 0',
 			},
 			{
 				id: 1,
+				live: false,
 				title: 'Этап 1',
 			},
 			{
 				id: 2,
+				live: false,
 				title: 'Этап 2',
 			},
 			{
 				id: 3,
+				live: false,
 				title: 'Этап 3',
 			},
 			{
 				id: 4,
+				live: false,
 				title: 'Этап 4',
 			},
 			{
 				id: 5,
+				live: false,
 				title: 'Этап 5',
 			},
 		],
@@ -74,26 +88,32 @@ const data = [
 		steps: [
 			{
 				id: 0,
+				live: false,
 				title: 'Этап 0',
 			},
 			{
 				id: 1,
+				live: false,
 				title: 'Этап 1',
 			},
 			{
 				id: 2,
+				live: false,
 				title: 'Этап 2',
 			},
 			{
 				id: 3,
+				live: false,
 				title: 'Этап 3',
 			},
 			{
 				id: 4,
+				live: false,
 				title: 'Этап 4',
 			},
 			{
 				id: 5,
+				live: false,
 				title: 'Этап 5',
 			},
 		],
@@ -105,26 +125,32 @@ const data = [
 		steps: [
 			{
 				id: 0,
+				live: false,
 				title: 'Этап 0',
 			},
 			{
 				id: 1,
+				live: false,
 				title: 'Этап 1',
 			},
 			{
 				id: 2,
+				live: false,
 				title: 'Этап 2',
 			},
 			{
 				id: 3,
+				live: false,
 				title: 'Этап 3',
 			},
 			{
 				id: 4,
+				live: false,
 				title: 'Этап 4',
 			},
 			{
 				id: 5,
+				live: false,
 				title: 'Этап 5',
 			},
 		],
@@ -143,7 +169,7 @@ const Stream: NextPage = () => {
 			<SearchBar />
 
 			{data.map((item) => (
-				<CityCard city={item} key={item.id} />
+				<CountryTracker city={item} key={item.id} />
 			))}
 		</section>
 	)

@@ -1,0 +1,19 @@
+@use 'sass:map';
+@use '@/styles/variables' as *;
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	.title_container {
+		display: flex;
+		position: relative;
+		:first-child {
+			margin-right: map.get($spacings, 'sm');
+		}
+	}
+	.country_container {
+		display: flex;
+		margin-bottom: 40px;
+		overflow-x: auto;
+	}	
+}

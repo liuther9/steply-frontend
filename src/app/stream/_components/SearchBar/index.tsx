@@ -1,8 +1,7 @@
-import s from '../SearchBar/SearchBar.module.scss'
-// import React, { useState } from 'react';
+import s from './SearchBar.module.scss'
 import { SlMagnifier } from 'react-icons/sl'
 
-const SearchBar = () => {
+export const SearchBar = () => {
 	return (
 		<div className={s.inputWrap}>
 			<SlMagnifier className={s.inputIcon} />
@@ -10,5 +9,3 @@ const SearchBar = () => {
 		</div>
 	)
 }
-
-export default SearchBar
