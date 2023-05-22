@@ -1,8 +1,10 @@
-import s from './MyPublication.module.scss'
 import Link from 'next/link'
 import { AiOutlineEye } from 'react-icons/ai'
-import { Text } from '@/shared/components'
 import { MdKeyboardArrowRight } from 'react-icons/md'
+
+import { Text } from '@/shared/components'
+
+import s from './MyPublication.module.scss'
 
 export const Publication = () => {
 	return (

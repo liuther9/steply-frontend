@@ -1,13 +1,15 @@
 'use client'
 
-import { FormEvent, useState } from 'react'
-import { NextPage } from 'next'
 import * as Form from '@radix-ui/react-form'
 import { useSupabase } from '@utils/supabase-provider'
-import { Button, MISMATCH_TYPES, Text, TextInput, Title } from '@/shared/components'
-import s from './page.module.scss'
+import { NextPage } from 'next'
 import { useRouter, useSearchParams } from 'next/navigation'
+import { FormEvent, useState } from 'react'
+
+import { Button, MISMATCH_TYPES, Text, TextInput, Title } from '@/shared/components'
 import { useCheckSession } from '@/utils/useCheckSession'
+
+import s from './page.module.scss'
 
 const ConfirmSignUpPage: NextPage = () => {
 	const [serverErrors, setServerErrors] = useState(false)

@@ -1,8 +1,10 @@
-import s from './CountryTracker.module.scss'
-import { Text } from '@/shared/components'
 import Image from 'next/image'
-import { CountryStep } from '../CountryStep'
+
+import { Text } from '@/shared/components'
+
 import { ICountryStep } from '../../_types'
+import { CountryStep } from '../CountryStep'
+import s from './CountryTracker.module.scss'
 
 interface Props {
 	city: {

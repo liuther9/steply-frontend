@@ -1,6 +1,8 @@
-import s from './CountryCard.module.scss'
-import { Text } from '@/shared/components'
 import { MdKeyboardArrowRight } from 'react-icons/md'
+
+import { Text } from '@/shared/components'
+
+import s from './CountryCard.module.scss'
 
 const Card = ({ cityName }: { cityName: string }) => {
 	return (

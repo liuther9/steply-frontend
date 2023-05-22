@@ -1,8 +1,10 @@
 import { NextPage } from 'next'
-import s from './page.module.scss'
+
 import { Text, Title } from '@/shared/components'
+
 import { CountryTracker, SearchBar } from './_components'
 import { ICountryTracker } from './_types'
+import s from './page.module.scss'
 
 const data: ICountryTracker[] = [
 	{

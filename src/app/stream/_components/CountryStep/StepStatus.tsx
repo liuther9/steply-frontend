@@ -1,6 +1,7 @@
 import { Text } from '@/shared/components'
-import s from './StepStatus.module.scss'
+
 import { EStepStatus } from '../../_constants'
+import s from './StepStatus.module.scss'
 
 export const StepStatus: React.FC<{ status: 'completed' | 'live' | 'in_progress' }> = ({ status }) => {
 	const className = `${s.wrapper + ' ' + s[status]}`

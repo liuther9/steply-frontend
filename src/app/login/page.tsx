@@ -1,14 +1,16 @@
 'use client'
 
-import { FormEvent, useState } from 'react'
-import Link from 'next/link'
-import { NextPage } from 'next'
 import * as Form from '@radix-ui/react-form'
 import { useSupabase } from '@utils/supabase-provider'
-import LoginCarousel from './_components/LoginCarousel'
+import { NextPage } from 'next'
+import Link from 'next/link'
+import { FormEvent, useState } from 'react'
+
 import { Button, MISMATCH_TYPES, Text, TextInput, Title } from '@/shared/components'
-import s from './page.module.scss'
 import { useCheckSession } from '@/utils'
+
+import LoginCarousel from './_components/LoginCarousel'
+import s from './page.module.scss'
 
 const Login: NextPage = () => {
 	useCheckSession()

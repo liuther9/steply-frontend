@@ -1,11 +1,13 @@
-import { BiCoin } from 'react-icons/bi'
 import { NextPage } from 'next'
+import { BiCoin } from 'react-icons/bi'
+
+import { Button, Text, Title } from '@/shared/components'
+
+import { BlockContainer } from './_components/BlockContainer'
+import Card from './_components/CountryCard'
+import Document from './_components/Document'
 import { Publication } from './_components/Publication/index'
 import s from './page.module.scss'
-import Card from './_components/CountryCard'
-import { Button, Text, Title } from '@/shared/components'
-import Document from './_components/Document'
-import { BlockContainer } from './_components/BlockContainer'
 const data = [
 	{
 		id: 1,

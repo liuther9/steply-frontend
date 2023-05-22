@@ -1,5 +1,6 @@
-import s from './SearchBar.module.scss'
 import { SlMagnifier } from 'react-icons/sl'
+
+import s from './SearchBar.module.scss'
 
 export const SearchBar = () => {
 	return (
