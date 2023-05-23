@@ -1,0 +1,23 @@
+@use 'sass:map';
+@use '@/styles/variables' as *;
+
+.announceDiv{
+	display: flex;
+	flex-direction: column;
+	padding: map.get($spacings, 'md') map.get($spacings, 'sm');
+	margin-right: map.get($spacings, 'md');
+	background: map.get($grays, '100');
+	border-radius: map.get($border-radiuses, 'md');
+	width: 296px;
+	height: 160px;
+	.container {
+	  &_top {
+		display: flex;
+		align-items: flex-start;
+		width: 100%;
+	}
+}
+.streamIcon{
+	margin-right: 10px;
+}
+}
