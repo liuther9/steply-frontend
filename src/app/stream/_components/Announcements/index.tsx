@@ -2,14 +2,11 @@ import Image from 'next/image'
 
 import { Text } from '@/shared/components'
 
+import { IAnnouncement } from '../../_types/Announcement'
 import s from '../Announcements/Announcements.module.scss'
 
 interface Props {
-	announ: {
-		id: number
-		name: string
-		cityTitle: string
-	}
+	announ: IAnnouncement
 }
 
 export const Announcement: React.FC<Props> = ({ announ: { name, cityTitle } }) => {
@@ -27,7 +24,7 @@ export const Announcement: React.FC<Props> = ({ announ: { name, cityTitle } }) =
 					Голосуй за эту страну и мы отправим тебя туда на 1 год!
 				</Text>
 				<div className={s.likeIcon}>
-					<Image alt='like' className={s.streamIcon} height={32} src='/like.svg' width={64} />
+					<Image alt='like' className={s.streamIcon} height={32} src='/like.png' width={64} />
 				</div>
 			</div>
 		</>
