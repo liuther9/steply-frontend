@@ -1,8 +1,10 @@
 import { NextPage } from 'next'
+import Image from 'next/image'
 
 import { Text, Title } from '@/shared/components'
 
 import { CountryTracker, SearchBar } from './_components'
+import { Announcement } from './_components/Announcements'
 import { ICountryTracker } from './_types'
 import s from './page.module.scss'
 
@@ -159,6 +161,35 @@ const data: ICountryTracker[] = [
 	},
 ]
 
+const announce = [
+	{
+		id: 1,
+		name: 'Tuvalu',
+		cityTitle: 'Тувалу',
+	},
+
+	{
+		id: 2,
+		name: 'Tuvalu',
+		cityTitle: 'Тувалу',
+	},
+	{
+		id: 3,
+		name: 'Tuvalu',
+		cityTitle: 'Тувалу',
+	},
+	{
+		id: 4,
+		name: 'Tuvalu',
+		cityTitle: 'Тувалу',
+	},
+	{
+		id: 5,
+		name: 'Tuvalu',
+		cityTitle: 'Тувалу',
+	},
+]
+
 const Stream: NextPage = () => {
 	return (
 		<section className={s.StrimSection}>
@@ -173,6 +204,19 @@ const Stream: NextPage = () => {
 			{data.map((item) => (
 				<CountryTracker city={item} key={item.id} />
 			))}
+			<button className={s.strimButton}>Еще страны</button>
+			<div className={s.strimWrap}>
+				<Image alt='stars' className={s.streamImage} height={35} src='/emoji.png' width={28} />
+				<Title ta='left'>Анонсы</Title>
+				<Text color='light' size='sm' ta='left'>
+					Ставьте лайки и голосуйте за курсы, которые хотите видеть в будущем
+				</Text>
+			</div>
+			<div className={s.announceWrap}>
+				{announce.map((item) => (
+					<Announcement announ={item} key={item.id} />
+				))}
+			</div>
 		</section>
 	)
 }
