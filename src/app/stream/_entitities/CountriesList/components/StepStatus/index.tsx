@@ -1,6 +1,6 @@
 import { Text } from '@/shared/components'
 
-import { EStepStatus } from '../../_constants'
+import { EStepStatus } from '../../constants'
 import s from './StepStatus.module.scss'
 
 export const StepStatus: React.FC<{ status: 'completed' | 'live' | 'in_progress' }> = ({ status }) => {

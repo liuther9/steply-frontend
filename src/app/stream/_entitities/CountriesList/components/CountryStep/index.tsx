@@ -1,8 +1,8 @@
 import { Text, Title } from '@/shared/components'
 
-import { ICountryStep } from '../../_types'
+import { ICountryStep } from '../../types'
+import { StepStatus } from '../StepStatus'
 import s from './CountryStep.module.scss'
-import { StepStatus } from './StepStatus'
 
 type Props = {
 	step: ICountryStep

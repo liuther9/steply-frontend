@@ -1,0 +1,7 @@
+@use 'sass:map';
+@use '@/styles/variables' as *;
+
+.wrapper {
+	margin-bottom: map.get($spacings, "xl");
+	width: 100%;
+}

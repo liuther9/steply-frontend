@@ -4,38 +4,4 @@
 .StrimSection {
   width: 100%;
   padding: map.get($spacings, "xxl") map.get($spacings, "xxxl");
-  .strimWrap{
-	margin-bottom: map.get($spacings, "xl");
-	width: 357px;
-	position: relative;
-  }
-  .strimButton{
-    // display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	padding: 12px 16px;
-	background: map.get($grays, "100");
-	border-radius: 16px;
-	border: 1px solid transparent;
-	font-weight: 700;
-	font-size: map.get($font-sizes, "sm");
-	color: map.get($grays, "500");
-	transition: all 0.1s linear;
-	margin: 0 0 32px;
-	cursor: pointer;
-	&:hover,
-	&:active {
-		border: 1px solid map.get($greens, "100");
-		background: map.get($greens, "300");
-    color: $white;
-	}
-  }
-  .announceWrap{
-	display: flex;
-  }
-  .streamImage{
-	position: absolute;
-	transform: translate(202px, 15%);
-  }
 }

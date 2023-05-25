@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { Text } from '@/shared/components'
 
-import { ICountryStep } from '../../_types'
+import { ICountryStep } from '../../types'
 import { CountryStep } from '../CountryStep'
 import s from './CountryTracker.module.scss'
 

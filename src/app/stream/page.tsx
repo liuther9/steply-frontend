@@ -1,11 +1,11 @@
 import { NextPage } from 'next'
-import Image from 'next/image'
 
-import { Text, Title } from '@/shared/components'
+import { Title } from '@/shared/components'
 
-import { CountryTracker, SearchBar } from './_components'
-import { Announcement } from './_components/Announcements'
-import { ICountryTracker } from './_types'
+import { ICountryTracker } from './_entitities'
+import { AnnouncementsList } from './_entitities/AnnouncementsList'
+import { BestStudentsList } from './_entitities/BestStudentsList/components/BestStudentsList'
+import { CountryList } from './_entitities/CountriesList'
 import s from './page.module.scss'
 
 const data: ICountryTracker[] = [
@@ -190,34 +190,22 @@ const announce = [
 	},
 ]
 
+const bestStudents = [
+	{ id: 0, avatar_url: '', name: 'Алексей', surname: 'Алексеев', rank: 1 },
+	{ id: 1, avatar_url: '', name: 'Алексей', surname: 'Алексеев', rank: 1 },
+	{ id: 2, avatar_url: '', name: 'Алексей', surname: 'Алексеев', rank: 1 },
+	{ id: 3, avatar_url: '', name: 'Алексей', surname: 'Алексеев', rank: 1 },
+]
+
 const Stream: NextPage = () => {
 	return (
-		<section className={s.StrimSection}>
-			<div className={s.strimWrap}>
-				<Title ta='left'>Стримы</Title>
-				<Text color='light' size='sm' ta='left'>
-					Смотрите обучающие стримы от квалифицированных преподователей
-				</Text>
-			</div>
-			<SearchBar />
+		<main className={s.StrimSection}>
+			<CountryList data={data} />
 
-			{data.map((item) => (
-				<CountryTracker city={item} key={item.id} />
-			))}
-			<button className={s.strimButton}>Еще страны</button>
-			<div className={s.strimWrap}>
-				<Image alt='stars' className={s.streamImage} height={35} src='/emoji.png' width={28} />
-				<Title ta='left'>Анонсы</Title>
-				<Text color='light' size='sm' ta='left'>
-					Ставьте лайки и голосуйте за курсы, которые хотите видеть в будущем
-				</Text>
-			</div>
-			<div className={s.announceWrap}>
-				{announce.map((item) => (
-					<Announcement announ={item} key={item.id} />
-				))}
-			</div>
-		</section>
+			<AnnouncementsList announcements={announce} />
+
+			<BestStudentsList data={bestStudents} />
+		</main>
 	)
 }
 
