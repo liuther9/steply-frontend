@@ -1,6 +1,8 @@
 import { FC, ReactNode } from 'react'
-import s from './BlockContainer.module.scss'
+
 import { Title } from '@/shared/components'
+
+import s from './BlockContainer.module.scss'
 
 export const BlockContainer: FC<{ children: ReactNode; title: string }> = ({ children, title }) => {
 	return (

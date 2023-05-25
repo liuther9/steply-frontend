@@ -1,0 +1,40 @@
+@use 'sass:map';
+@use '@/styles/variables' as *;
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	.title_container {
+		display: flex;
+		position: relative;
+		:first-child {
+			margin-right: map.get($spacings, 'sm');
+		}
+	}
+	.country_container {
+		display: flex;
+		margin-bottom: 40px;
+		overflow-x: auto;
+	}
+  .stream_button {
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding: map.get($spacings, "sm") map.get($spacings, "md");
+		background: map.get($grays, "100");
+		border-radius: map.get($border-radiuses, "md");
+		border: 1px solid transparent;
+		font-weight: 700;
+		font-size: map.get($font-sizes, "sm");
+		color: map.get($grays, "500");
+		transition: all 0.1s linear;
+		margin-bottom: map.get($spacings, "xxl");
+		cursor: pointer;
+		&:hover,
+		&:active {
+			border: 1px solid map.get($greens, "100");
+			background: map.get($greens, "300");
+			color: $white;
+		}
+  }
+}

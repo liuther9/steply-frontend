@@ -1,5 +1,6 @@
-import s from '../_components/card.module.scss'
 import { AiOutlineRight } from 'react-icons/ai'
+
+import s from '../_components/card.module.scss'
 
 const Card = ({ cityName }: { cityName: string }) => {
 	return (

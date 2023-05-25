@@ -1,4 +1,5 @@
 import { FC } from 'react'
+
 import s from './dots.module.scss'
 
 const Dots: FC<{ dotCount: number; activeIndex: number }> = ({ dotCount, activeIndex }) => {

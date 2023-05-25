@@ -1,4 +1,5 @@
 import { useRouter } from 'next/navigation'
+
 import { useSupabase } from './supabase-provider'
 
 export const useCheckSession = async () => {

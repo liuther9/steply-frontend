@@ -1,6 +1,8 @@
-import s from '../Document/Document.module.scss'
-import { Text } from '@/shared/components'
 import { GiTrophyCup } from 'react-icons/gi'
+
+import { Text } from '@/shared/components'
+
+import s from '../Document/Document.module.scss'
 
 const Document = ({ titleDocument }: { titleDocument: string }) => {
 	return (

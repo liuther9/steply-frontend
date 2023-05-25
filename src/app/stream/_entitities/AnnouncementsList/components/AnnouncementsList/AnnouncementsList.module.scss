@@ -1,0 +1,12 @@
+@use 'sass:map';
+@use '@/styles/variables' as *;
+
+.wrapper {
+	margin-bottom: map.get($spacings, "xl");
+	width: 100%;
+	.container_announcements {
+		display: flex;
+		overflow-x: auto;
+		width: 100%;
+	}
+}

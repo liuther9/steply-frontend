@@ -1,4 +1,5 @@
 import { FC, ReactNode } from 'react'
+
 import s from './text.module.scss'
 
 enum TEXT_SIZE {

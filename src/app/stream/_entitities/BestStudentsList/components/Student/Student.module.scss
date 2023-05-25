@@ -1,0 +1,38 @@
+@use 'sass:map';
+@use '@/styles/variables' as *;
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	padding: map.get($spacings, "lg") map.get($spacings, "md");
+	width: 650px;
+	max-width: 100%;
+	background: map.get($grays, '100');
+	border-radius: map.get($border-radiuses, 'md');
+	margin-bottom: map.get($spacings, 'sm');
+	&:nth-of-type(2), &:nth-of-type(3), &:first-of-type {
+		.ranking {
+			background: map.get($yellows, '500');
+		}
+	}
+	.ranking {
+		width: 32px;
+		height: 32px;
+		border-radius: map.get($border-radiuses, 'sm');
+		background: map.get($grays, '500');
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+		margin-right: map.get($spacings, 'md');
+	}
+	.avatar {
+		position: relative;
+		border-radius: map.get($border-radiuses, 'max');
+		width: 32px;
+		height: 32px;
+		overflow: hidden;
+		margin-right: map.get($spacings, 'sm');
+		background: $white;
+	}
+}

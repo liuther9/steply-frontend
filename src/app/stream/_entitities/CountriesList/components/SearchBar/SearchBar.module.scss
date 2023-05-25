@@ -1,0 +1,26 @@
+@use 'sass:map';
+@use '@/styles/variables' as *;
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	position: relative;
+	margin-bottom: 16px;
+	.inputIcon {
+		font-size: map.get($font-sizes, 'md');
+		color: map.get($grays, '500');
+		position: absolute;
+		left: 8px;
+	}
+	.textInput {
+		width: 350px;
+		max-width: 100%;
+		height: 40px;
+		background: map.get($grays, '100');
+		border: 1px solid transparent;
+		border-radius: 12px;
+		padding: 8px 8px 8px 36px;
+		outline: map.get($grays, '400');
+	}
+}

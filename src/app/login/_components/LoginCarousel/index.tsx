@@ -1,7 +1,9 @@
 import { useRef, useState } from 'react'
-import Dots from './Dots'
+
 import { Button, Text, Title } from '@/shared/components'
 import { useWindowSize } from '@/shared/hooks'
+
+import Dots from './Dots'
 import s from './LoginCarousel.module.scss'
 
 const slidenumber = [1, 2, 3]

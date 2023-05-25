@@ -20,7 +20,50 @@
 		font-size: map.get($font-sizes, "xxl");
 		line-height: 40px;
 	}
+	&.h3 {
+		font-size: map.get($font-sizes, "xl");
+	}
+	&.h4 {
+		font-size: map.get($font-sizes, "lg");
+		line-height: map.get($font-sizes, "lg");
+	}
 	&.bold {
 		font-weight: 800;
+	}
+	&.xs {
+		font-size: map.get($font-sizes, "xs");
+	}
+	&.sm {
+		font-size: map.get($font-sizes, "sm");
+	}
+	&.md {
+		font-size: map.get($font-sizes, "md");
+	}
+	&.lg {
+		font-size: map.get($font-sizes, "lg");
+	}
+	&.xl {
+		font-size: map.get($font-sizes, "xl");
+	}
+	&.xxxl {
+		font-size: map.get($font-sizes, "xxxl");
+	}
+	&.mb_none {
+		margin-bottom: 0;
+	}
+	&.mb_xs {
+		margin-bottom: map.get($spacings, "xs");
+	}
+	&.mb_sm {
+		margin-bottom: map.get($spacings, "sm");
+	}
+	&.mb_md {
+		margin-bottom: map.get($spacings, "md");
+	}
+	&.mb_lg {
+		margin-bottom: map.get($spacings, "lg");
+	}
+	&.mb_xl {
+		margin-bottom: map.get($spacings, "xl");
 	}
 }

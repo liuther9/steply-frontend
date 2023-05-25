@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use '@/styles/variables' as *;
+
+.wrapper {
+	background-color: map.get($grays, '500');
+	height: fit-content;
+	padding: 0 map.get($spacings, 'md');
+	border-radius: map.get($border-radiuses, 'md');
+	:first-child {
+		color: #FFFFFF;
+	}
+	&.live {
+		background-color: map.get($reds, '100');
+	}
+	&.in_progress {
+		background-color: map.get($purples, '100');
+		:first-child {
+			color: map.get($purples, '500');
+		}
+	}
+}
