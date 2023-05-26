@@ -1,0 +1,43 @@
+@use 'sass:map';
+@use '@/styles/variables' as *;
+
+.mobile_wrap {
+	display: block;
+	display: flex;
+	flex-direction: column;
+	padding: map.get($spacings, 'md') map.get($spacings, 'sm');
+	margin-right: map.get($spacings, 'md');
+	background: map.get($grays, '100');
+	border-radius: map.get($border-radiuses, 'md');
+	min-width: 296px;
+	height: 160px;
+	.container {
+		&_mob {
+			  display: flex;
+			  align-items: flex-start;
+			  width: 100%;
+			  img {
+				  margin-right: map.get($spacings, 'xs');
+			  }
+		  }
+		  &_mob_like {
+			  display: flex;
+			  align-items: center;
+			  background: map.get($greens, '200');
+			  border-radius: map.get($border-radiuses, 'max');
+			  padding: map.get($spacings, 'xs') map.get($spacings, 'xss');
+			  width: fit-content;
+			  svg {
+				  font-size: map.get($font-sizes, 'md');
+				  margin-right: map.get($spacings, 'xs');
+				  path {
+					  fill: #fff;
+				  }
+			  }
+			  span {
+				  font-size: map.get($font-sizes, 'xss');
+				  color: #fff;
+			  }
+		  }
+	  }
+  }

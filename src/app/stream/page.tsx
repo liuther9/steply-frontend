@@ -1,9 +1,8 @@
 import { NextPage } from 'next'
 
-import { Title } from '@/shared/components'
-
 import { ICountryTracker } from './_entitities'
 import { AnnouncementsList } from './_entitities/AnnouncementsList'
+// import { AnnounMobile } from './_entitities/AnnouncementsList/components/AnnouncementMobile'
 import { BestStudentsList } from './_entitities/BestStudentsList/components/BestStudentsList'
 import { CountryList } from './_entitities/CountriesList'
 import s from './page.module.scss'
@@ -189,6 +188,24 @@ const announce = [
 		cityTitle: 'Тувалу',
 	},
 ]
+
+// const mobileAnnoun = [
+// 	{
+// 		id: 1,
+// 		name: 'Tuvalu',
+// 		cityTitle: 'Тувалу',
+// 	},
+// 	{
+// 		id: 2,
+// 		name: 'Britain',
+// 		cityTitle: 'Великобритания',
+// 	},
+// 	{
+// 		id: 3,
+// 		name: 'Uzhbekistan',
+// 		cityTitle: 'Узбекистан',
+// 	},
+// ]
 
 const bestStudents = [
 	{ id: 0, avatar_url: '', name: 'Алексей', surname: 'Алексеев', rank: 1 },

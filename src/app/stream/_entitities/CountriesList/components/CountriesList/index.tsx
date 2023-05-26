@@ -19,6 +19,7 @@ export const CountryList = ({ data }: { data: ICountryTracker[] }) => {
 			{data.map((item: ICountryTracker) => (
 				<CountryTracker city={item} key={item.id} />
 			))}
+			<button className={s.stream_button}>Еще страны</button>
 		</section>
 	)
 }
