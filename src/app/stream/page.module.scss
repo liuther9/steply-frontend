@@ -5,3 +5,10 @@
   width: 100%;
   padding: map.get($spacings, "xxl") map.get($spacings, "xxxl");
 }
+
+@media screen and (max-width: map.get($container-max-widths, "md")){
+  .StrimSection{
+    padding: map.get($spacings, "md") map.get($spacings, "xl");
+}
+  }
+

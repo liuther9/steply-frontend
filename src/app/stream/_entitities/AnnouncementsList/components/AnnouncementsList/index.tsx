@@ -4,6 +4,7 @@ import { Text, Title } from '@/shared/components'
 
 import { IAnnouncement } from '../../types'
 import { Announcement } from '../Announcement'
+import { AnnounMobile } from '../AnnouncementMobile'
 import s from './AnnouncementsList.module.scss'
 
 interface Props {
@@ -23,6 +24,13 @@ export const AnnouncementsList: React.FC<Props> = ({ announcements }) => {
 				{announcements.map((item: IAnnouncement) => (
 					<Announcement announcement={item} key={item.id} />
 				))}
+			</div>
+			<div className={s.container_mobile_ann}>
+				<div className={s.container_announcements}>
+					{announcements.map((item: IAnnouncement) => (
+						<AnnounMobile announcement={item} key={item.id} />
+					))}
+				</div>
 			</div>
 		</section>
 	)

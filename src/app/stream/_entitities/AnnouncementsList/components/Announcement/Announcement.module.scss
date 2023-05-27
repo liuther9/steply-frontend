@@ -40,3 +40,24 @@
 		}
 	}
 }
+.mobile_wrapp{
+	display: none;
+}
+// @media screen and (max-width: map.get($container-max-widths, "md")){
+// 	.wrapper{
+// 		display: none;
+// 	}
+// 	.mobile_wrapp{
+// 		display: block;
+// 		display: flex;
+// 		width: 358px;
+// 		height: 72px;
+// 		padding: map.get($spacings, 'md') map.get($spacings, 'sm');
+// 		margin-right: map.get($spacings, 'md');
+// 		background: map.get($grays, '100');
+// 		border-radius: map.get($border-radiuses, 'md');
+// 	}
+// 	.container_mob{
+// 		flex-direction: column;
+// 	}
+// }
